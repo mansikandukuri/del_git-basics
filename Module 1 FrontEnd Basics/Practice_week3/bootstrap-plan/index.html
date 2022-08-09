@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.1.1/css/all.css" integrity="sha384-/frq1SRXYH/bSyou/HUp/hib7RVN1TawQYja658FEOodR/FQBKVqT9Ol+Oz3Olq5" crossorigin="anonymous"/>
+    <style>
+        .main-body
+        {
+            /* background-color: #bbcada; */
+            background-color: rgb(238, 243, 248);
+            /* background: url(bg.jpg); */
+            background-size: cover;
+            height: 850px;
+            color: #3f5e7d;
+        }
+        .main-text
+        {
+            font-weight: 600;
+            color: #636d77;
+        }
+        .small-text
+        {
+            font-size: 0.7rem;
+            color: rgb(166, 165, 165);
+        }
+        .btn-primary
+        {
+            background-color: rgb(186, 214, 240);
+            border: 0.1rem rgb(186, 214, 240) solid;
+            color: #074889;
+            font-weight: 600;
+            width: 100%;
+        }
+        table
+        {
+            text-align: left;
+        }
+        .card:hover
+        {
+            border: 0.1rem blue solid;
+            transform: scale(107%);
+        }
+        .nav-btn
+        {
+            width: 13rem;
+            color: rgb(63, 63, 63);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            column-gap: 1rem;
+        }
+        .nav-btn:hover
+        {
+            color: white;
+            background-color: blue;
+        }
+        .monthly-anual
+        {
+            display: flex;
+            align-items:center;
+            justify-content: center;
+            /* column-gap: 0.2rem; */
+        }
+        .sneat
+        {
+            display: flex;
+            height: 4rem;
+            align-items: center;
+            /* padding-left: 0.7rem; */
+            font-size: 2rem;
+            font-weight: 700;
+            color: #3f5e7d;
+        }
+        .save-full
+        {
+            display: flex;
+            align-items: center;
+            margin-left: 33rem;
+        }
+        .save
+        {
+            background-color: #ccdae9;
+            color: #074889;
+            font-size: 0.7rem;
+            width: 5.4rem;
+            padding-left: 0.1rem;
+        }
+        .buy
+        {
+            background-color: orangered;
+            color: white;
+            font-size: 1rem;
+            font-weight: 600;
+            position: absolute;
+            bottom: -30%;
+            right: 1%;
+            border: 0;
+            border-radius: 0.3rem;
+            box-shadow: 0 0 15px 5px orangered;
+            animation-name: anim-first;
+            animation-duration: 1s;
+            animation-iteration-count: infinite;
+        }
+        @keyframes anim-first
+        {
+            0%
+            {
+                background-color: orangered;
+                color: white;
+            }
+            50%
+            {
+                background-color: white;
+                color: orangered;
+            }
+        }
+        .heading
+        {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-right: 0;
+        }
+    </style>
+    <title>Right Plan</title>
+</head>
+<body>
+    <div class="row">
+        <div class="col-sm-2">
+            <div class="d-flex align-items-start" style="font-size: 0.8rem">
+                
+                
+                <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                    <div class="heading">
+                    <div class="sneat">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-arrow-up-right me-2 " viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0v-6z"/>
+                          </svg>
+                          <div>Sneat</div>
+                    </div>
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#3f5e7d" class="bi bi-arrow-left-circle-fill pe-0" viewBox="0 0 16 16">
+                            <path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0zm3.5 7.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5z"/>
+                          </svg>
+                    </div>
+                    </div>
+
+                    <button class="nav-btn nav-link text-start" id="v-pills-profile-tab" data-bs-toggle="pill" data-bs-target="#v-pills-profile" type="button" role="tab" aria-controls="v-pills-profile" aria-selected="false">
+                        <div class="d-flex align-items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-shield-check" viewBox="0 0 16 16">
+                                <path d="M5.338 1.59a61.44 61.44 0 0 0-2.837.856.481.481 0 0 0-.328.39c-.554 4.157.726 7.19 2.253 9.188a10.725 10.725 0 0 0 2.287 2.233c.346.244.652.42.893.533.12.057.218.095.293.118a.55.55 0 0 0 .101.025.615.615 0 0 0 .1-.025c.076-.023.174-.061.294-.118.24-.113.547-.29.893-.533a10.726 10.726 0 0 0 2.287-2.233c1.527-1.997 2.807-5.031 2.253-9.188a.48.48 0 0 0-.328-.39c-.651-.213-1.75-.56-2.837-.855C9.552 1.29 8.531 1.067 8 1.067c-.53 0-1.552.223-2.662.524zM5.072.56C6.157.265 7.31 0 8 0s1.843.265 2.928.56c1.11.3 2.229.655 2.887.87a1.54 1.54 0 0 1 1.044 1.262c.596 4.477-.787 7.795-2.465 9.99a11.775 11.775 0 0 1-2.517 2.453 7.159 7.159 0 0 1-1.048.625c-.28.132-.581.24-.829.24s-.548-.108-.829-.24a7.158 7.158 0 0 1-1.048-.625 11.777 11.777 0 0 1-2.517-2.453C1.928 10.487.545 7.169 1.141 2.692A1.54 1.54 0 0 1 2.185 1.43 62.456 62.456 0 0 1 5.072.56z"/>
+                                <path d="M10.854 5.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 7.793l2.646-2.647a.5.5 0 0 1 .708 0z"/>
+                              </svg>
+                            <div class="ps-3">Roles & Permissions</div>
+                        </div>
+                        
+                        <i class="fa-solid fa-angle-right" style="color:gray; font-size: 0.7rem;"></i>
+                    </button>
+
+                    <button class="nav-btn nav-link text-start" id="v-pills-profile-tab" data-bs-toggle="pill" data-bs-target="#v-pills-profile" type="button" role="tab" aria-controls="v-pills-profile" aria-selected="false">
+                        <div class="d-flex align-items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-archive" viewBox="0 0 16 16">
+                                <path d="M0 2a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1v7.5a2.5 2.5 0 0 1-2.5 2.5h-9A2.5 2.5 0 0 1 1 12.5V5a1 1 0 0 1-1-1V2zm2 3v7.5A1.5 1.5 0 0 0 3.5 14h9a1.5 1.5 0 0 0 1.5-1.5V5H2zm13-3H1v2h14V2zM5 7.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5z"/>
+                              </svg>
+                            <div class="ps-3">Pages</div>
+                        </div>
+                        <i class="fa-solid fa-angle-right text-end" style="color:gray; font-size: 0.7rem;"></i>
+                    </button>
+
+                    <button class="nav-btn nav-link text-start" id="v-pills-profile-tab" data-bs-toggle="pill" data-bs-target="#v-pills-profile" type="button" role="tab" aria-controls="v-pills-profile" aria-selected="false">
+                        <div class="d-flex align-items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-dot" viewBox="0 0 16 16">
+                                <path d="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"/>
+                              </svg>
+                            <div class="ps-3">User Profile</div>
+                        </div>
+                        <i class="fa-solid fa-angle-right" style="color:gray; font-size: 0.7rem;"></i>
+                    </button>
+
+                    <button class="nav-btn nav-link text-start" id="v-pills-profile-tab" data-bs-toggle="pill" data-bs-target="#v-pills-profile" type="button" role="tab" aria-controls="v-pills-profile" aria-selected="false">
+                        <div class="d-flex align-items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-dot" viewBox="0 0 16 16">
+                                <path d="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"/>
+                              </svg>
+                            <div class="ps-3">Account Settings</div>
+                        </div>
+                        <i class="fa-solid fa-angle-right" style="color:gray; font-size: 0.7rem;"></i>
+                    </button>
+
+                    <button class="nav-btn nav-link text-start" id="v-pills-profile-tab" data-bs-toggle="pill" data-bs-target="#v-pills-profile" type="button" role="tab" aria-controls="v-pills-profile" aria-selected="false">
+                        <div class="d-flex align-items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-dot" viewBox="0 0 16 16">
+                                <path d="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"/>
+                              </svg>
+                            <div class="ps-3">FAQ</div>
+                        </div>
+                        <i class="fa-solid fa-angle-right" style="color:gray; font-size: 0.7rem;"></i>
+                    </button>
+
+                    <button class="nav-btn nav-link text-start" id="v-pills-profile-tab" data-bs-toggle="pill" data-bs-target="#v-pills-profile" type="button" role="tab" aria-controls="v-pills-profile" aria-selected="false">
+                        <div class="d-flex align-items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-dot" viewBox="0 0 16 16">
+                                <path d="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"/>
+                              </svg>
+                            <div class="ps-3">Help Center</div>
+                        </div>
+                        <i class="fa-solid fa-angle-right" style="color:gray; font-size: 0.7rem;"></i>
+                    </button>
+
+                    <button class="nav-btn nav-link text-start" id="v-pills-profile-tab" data-bs-toggle="pill" data-bs-target="#v-pills-profile" type="button" role="tab" aria-controls="v-pills-profile" aria-selected="false">
+                        <div class="d-flex align-items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-dot" viewBox="0 0 16 16">
+                                <path d="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"/>
+                              </svg>
+                            <div class="ps-3">Pricing</div>
+                        </div>
+                        <i class="fa-solid fa-angle-right" style="color:gray; font-size: 0.7rem;"></i>
+                    </button>
+
+                    <button class="nav-btn nav-link text-start" id="v-pills-profile-tab" data-bs-toggle="pill" data-bs-target="#v-pills-profile" type="button" role="tab" aria-controls="v-pills-profile" aria-selected="false">
+                        <div class="d-flex align-items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-dot" viewBox="0 0 16 16">
+                                <path d="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"/>
+                              </svg>
+                            <div class="ps-3">Misc</div>
+                        </div>
+                        <i class="fa-solid fa-angle-right" style="color:gray; font-size: 0.7rem;"></i>
+                    </button>
+
+                    <button class="nav-btn nav-link text-start" id="v-pills-profile-tab" data-bs-toggle="pill" data-bs-target="#v-pills-profile" type="button" role="tab" aria-controls="v-pills-profile" aria-selected="false">
+                        <div class="d-flex align-items-baseline">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-unlock" viewBox="0 0 16 16">
+                                <path d="M11 1a2 2 0 0 0-2 2v4a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2h5V3a3 3 0 0 1 6 0v4a.5.5 0 0 1-1 0V3a2 2 0 0 0-2-2zM3 8a1 1 0 0 0-1 1v5a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V9a1 1 0 0 0-1-1H3z"/>
+                              </svg>
+                            <div class="ps-3">Authentications</div>
+                        </div>
+                        <i class="fa-solid fa-angle-right" style="color:gray; font-size: 0.7rem;"></i>
+                    </button>
+
+                    <button class="nav-btn nav-link text-start" id="v-pills-profile-tab" data-bs-toggle="pill" data-bs-target="#v-pills-profile" type="button" role="tab" aria-controls="v-pills-profile" aria-selected="false" > 
+                        <div class="d-flex align-items-baseline">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-card-list" viewBox="0 0 16 16">
+                                <path d="M14.5 3a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h13zm-13-1A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-13z"/>
+                                <path d="M5 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 5 8zm0-2.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm0 5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm-1-5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0zM4 8a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0zm0 2.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0z"/>
+                              </svg>
+                            <div class="ps-3">Wizard Examples</div>
+                        </div>
+                        <i class="fa-solid fa-angle-right" style="color:gray; font-size: 0.7rem;"></i>
+                    </button>
+
+                    <button class="nav-btn nav-link text-start" id="v-pills-profile-tab" data-bs-toggle="pill" data-bs-target="#v-pills-profile" type="button" role="tab" aria-controls="v-pills-profile" aria-selected="false">
+                        <div class="d-flex align-items-baseline">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-file-earmark-arrow-up" viewBox="0 0 16 16">
+                                <path d="M8.5 11.5a.5.5 0 0 1-1 0V7.707L6.354 8.854a.5.5 0 1 1-.708-.708l2-2a.5.5 0 0 1 .708 0l2 2a.5.5 0 0 1-.708.708L8.5 7.707V11.5z"/>
+                                <path d="M14 14V4.5L9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2zM9.5 3A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h5.5v2z"/>
+                              </svg>
+                            <div class="ps-3">Modal Examples</div>
+                        </div>
+                        <i class="fa-solid fa-angle-right" style="color:gray; font-size: 0.7rem;"></i>
+                    </button>
+                    <div class="my-2 d-flex align-items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-dash-lg" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M2 8a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11A.5.5 0 0 1 2 8Z"/>
+                          </svg>
+                        <div class="ms-1" style="color: rgb(92, 91, 91);">COMPONENTS</div> 
+                    </div>
+                    <button class="nav-btn nav-link text-start" id="v-pills-profile-tab" data-bs-toggle="pill" data-bs-target="#v-pills-profile" type="button" role="tab" aria-controls="v-pills-profile" aria-selected="false">
+                        <div class="d-flex align-items-baseline">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-card-text" viewBox="0 0 16 16">
+                                <path d="M14.5 3a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h13zm-13-1A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-13z"/>
+                                <path d="M3 5.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zM3 8a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9A.5.5 0 0 1 3 8zm0 2.5a.5.5 0 0 1 .5-.5h6a.5.5 0 0 1 0 1h-6a.5.5 0 0 1-.5-.5z"/>
+                              </svg>
+                            <div class="ps-3">Cards</div>
+                        </div>
+                        <i class="fa-solid fa-angle-right" style="color:gray; font-size: 0.7rem;"></i>
+                    </button>
+
+                    <button class="nav-btn nav-link text-start" id="v-pills-profile-tab" data-bs-toggle="pill" data-bs-target="#v-pills-profile" type="button" role="tab" aria-controls="v-pills-profile" aria-selected="false">
+                        <div class="d-flex align-items-baseline">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-archive" viewBox="0 0 16 16">
+                                <path d="M0 2a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1v7.5a2.5 2.5 0 0 1-2.5 2.5h-9A2.5 2.5 0 0 1 1 12.5V5a1 1 0 0 1-1-1V2zm2 3v7.5A1.5 1.5 0 0 0 3.5 14h9a1.5 1.5 0 0 0 1.5-1.5V5H2zm13-3H1v2h14V2zM5 7.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5z"/>
+                              </svg>
+                            <div class="ps-3">User Interface</div>
+                        </div>
+                        <i class="fa-solid fa-angle-right" style="color:gray; font-size: 0.7rem;"></i>
+                    </button>
+
+                    <button class="nav-btn nav-link text-start" id="v-pills-profile-tab" data-bs-toggle="pill" data-bs-target="#v-pills-profile" type="button" role="tab" aria-controls="v-pills-profile" aria-selected="false">
+                        <div class="d-flex align-items-baseline">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-back" viewBox="0 0 16 16">
+                                <path d="M0 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v2h2a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2H2a2 2 0 0 1-2-2V2zm2-1a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H2z"/>
+                              </svg>
+                            <div class="ps-3">Extended UI</div>
+                        </div>
+                        <i class="fa-solid fa-angle-right" style="color:gray; font-size: 0.7rem;"></i>
+                    </button>
+
+                    <button class="nav-btn nav-link text-start" id="v-pills-profile-tab" data-bs-toggle="pill" data-bs-target="#v-pills-profile" type="button" role="tab" aria-controls="v-pills-profile" aria-selected="false">
+                        <div class="d-flex align-items-baseline">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bookmark" viewBox="0 0 16 16">
+                                <path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.777.416L8 13.101l-5.223 2.815A.5.5 0 0 1 2 15.5V2zm2-1a1 1 0 0 0-1 1v12.566l4.723-2.482a.5.5 0 0 1 .554 0L13 14.566V2a1 1 0 0 0-1-1H4z"/>
+                              </svg>
+                            <div class="ps-3">Icons</div>
+                        </div>
+                        <i class="fa-solid fa-angle-right" style="color:gray; font-size: 0.7rem;"></i>
+                    </button>
+
+                    <div class="my-2 d-flex align-items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-dash-lg" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M2 8a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11A.5.5 0 0 1 2 8Z"/>
+                          </svg>
+                        <div class="ms-1" style="color: rgb(92, 91, 91);">FORMS AND TABLES</div> 
+                    </div>
+                    <button class="nav-btn nav-link text-start" id="v-pills-profile-tab" data-bs-toggle="pill" data-bs-target="#v-pills-profile" type="button" role="tab" aria-controls="v-pills-profile" aria-selected="false">
+                        <div class="d-flex align-items-baseline">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-card-text" viewBox="0 0 16 16">
+                                <path d="M14.5 3a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h13zm-13-1A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-13z"/>
+                                <path d="M3 5.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zM3 8a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9A.5.5 0 0 1 3 8zm0 2.5a.5.5 0 0 1 .5-.5h6a.5.5 0 0 1 0 1h-6a.5.5 0 0 1-.5-.5z"/>
+                              </svg>
+                            <div class="ps-3">Form Elements</div>
+                        </div>
+                        <i class="fa-solid fa-angle-right" style="color:gray; font-size: 0.7rem;"></i>
+                    </button>
+
+                    <button class="nav-btn nav-link text-start" id="v-pills-profile-tab" data-bs-toggle="pill" data-bs-target="#v-pills-profile" type="button" role="tab" aria-controls="v-pills-profile" aria-selected="false">
+                        <div class="d-flex align-items-baseline">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-card-text" viewBox="0 0 16 16">
+                                <path d="M14.5 3a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h13zm-13-1A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-13z"/>
+                                <path d="M3 5.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zM3 8a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9A.5.5 0 0 1 3 8zm0 2.5a.5.5 0 0 1 .5-.5h6a.5.5 0 0 1 0 1h-6a.5.5 0 0 1-.5-.5z"/>
+                              </svg>
+                            <div class="ps-3">Form Layouts</div>
+                        </div>
+                        <i class="fa-solid fa-angle-right" style="color:gray; font-size: 0.7rem;"></i>
+                    </button>
+                
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-10">
+            <div class="main-body px-5 pt-2">
+
+                <div class="input-group mb-3">
+                    <button class="btn btn-outline-secondary" type="button" id="button-addon1">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-search d-flex align-items-center" style="color:rgb(59, 57, 57);" viewBox="0 0 16 16">
+                            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                          </svg>
+                    </button>
+                    <input type="text" class="form-control" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1">
+                    <button class="btn btn-outline-secondary" type="button" id="button-addon1">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-moon d-flex align-items-center" style="color:rgb(59, 57, 57);" viewBox="0 0 16 16">
+                            <path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278zM4.858 1.311A7.269 7.269 0 0 0 1.025 7.71c0 4.02 3.279 7.276 7.319 7.276a7.316 7.316 0 0 0 5.205-2.162c-.337.042-.68.063-1.029.063-4.61 0-8.343-3.714-8.343-8.29 0-1.167.242-2.278.681-3.286z"/>
+                          </svg>
+                    </button>
+                    <button class="btn btn-outline-secondary" type="button" id="button-addon1">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-grid d-flex align-items-center" style="color:rgb(59, 57, 57);" viewBox="0 0 16 16">
+                            <path d="M1 2.5A1.5 1.5 0 0 1 2.5 1h3A1.5 1.5 0 0 1 7 2.5v3A1.5 1.5 0 0 1 5.5 7h-3A1.5 1.5 0 0 1 1 5.5v-3zM2.5 2a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zm6.5.5A1.5 1.5 0 0 1 10.5 1h3A1.5 1.5 0 0 1 15 2.5v3A1.5 1.5 0 0 1 13.5 7h-3A1.5 1.5 0 0 1 9 5.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zM1 10.5A1.5 1.5 0 0 1 2.5 9h3A1.5 1.5 0 0 1 7 10.5v3A1.5 1.5 0 0 1 5.5 15h-3A1.5 1.5 0 0 1 1 13.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zm6.5.5A1.5 1.5 0 0 1 10.5 9h3a1.5 1.5 0 0 1 1.5 1.5v3a1.5 1.5 0 0 1-1.5 1.5h-3A1.5 1.5 0 0 1 9 13.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3z"/>
+                          </svg>
+                          
+                    </button>
+                    <button class="btn btn-outline-secondary" type="button" id="button-addon1">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-bell d-flex align-items-center" style="color:rgb(59, 57, 57);" viewBox="0 0 16 16">
+                            <path d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2zM8 1.918l-.797.161A4.002 4.002 0 0 0 4 6c0 .628-.134 2.197-.459 3.742-.16.767-.376 1.566-.663 2.258h10.244c-.287-.692-.502-1.49-.663-2.258C12.134 8.197 12 6.628 12 6a4.002 4.002 0 0 0-3.203-3.92L8 1.917zM14.22 12c.223.447.481.801.78 1H1c.299-.199.557-.553.78-1C2.68 10.2 3 6.88 3 6c0-2.42 1.72-4.44 4.005-4.901a1 1 0 1 1 1.99 0A5.002 5.002 0 0 1 13 6c0 .88.32 4.2 1.22 6z"/>
+                          </svg>
+                    </button>
+                </div>
+
+                <!-- <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon1">🔎</span>
+                    <input type="text" class="form-control" placeholder="Search (Ctrl+/)" aria-label="Username" aria-describedby="basic-addon1">
+                </div> -->
+                <h2 class="text-center mt-5">Find the right plan for your site</h2>
+                <p class=" main-text text-center"><I>Get started with us-it's perfect for individuals and teams. Choose a subscription plan that meets your needs.</I></p>
+                <br>
+                <br>
+                <br>
+                <div class="save-full mb-0">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-90deg-down" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M4.854 14.854a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L4 13.293V3.5A2.5 2.5 0 0 1 6.5 1h8a.5.5 0 0 1 0 1h-8A1.5 1.5 0 0 0 5 3.5v9.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4z"/>
+                          </svg>
+                    </div>
+                    <div class="save">
+                        SAVE UP TO 10%
+                    </div>
+                </div>
+                <div class="monthly-anual mt-0">
+                    <div class="pe-2">Monthly</div>
+                    <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" id="flexSwitchCheckReverse">
+                    </div>
+                    <div class="ps-1">Anual</div>
+                </div>
+                <br>
+                <br>
+                  <div class="row">
+                    <div class="col-sm-4">
+                      <div class="card">
+                        <div class="card-body text-center">
+                          <h5 class="card-title text-center">STARTER</h5>
+                          <span class ="fa-2x fa-stack py-3">
+                            <i class="fa-solid fa-circle fa-stack-2x "></i>
+                            <i class="fa-solid fa-book-bookmark fa-stack-1x fa-inverse"></i>
+                          </span>
+                          <h4 class="card-text text-center mt-4"><sup>$</sup>0<sub>/month</sub></h4>
+                          <div class="small-text text-center mb-4"> Free</div>
+                                <table class="mb-4">
+                                    <tr>
+                                        <td><i class="fa-solid fa-circle-check"></i></td>
+                                        <td class="ps-3">Rich landing pages</td>
+                                    </tr>
+                                    <tr>
+                                        <td><i class="fa-solid fa-circle-check"></i></td>
+                                        <td class="ps-3">100+ components</td>
+                                    </tr>
+                                    <tr>
+                                        <td><i class="fa-solid fa-circle-check"></i></td>
+                                        <td class="ps-3">Basic support on GitHub</td>
+                                    </tr>
+                                </table>
+                          <a href="#" class="btn btn-primary">Get started for free</a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="card">
+                          <div class="card-body text-center">
+                            <h5 class="card-title text-center">PRO</h5>
+                            <span class ="fa-2x fa-stack py-3">
+                              <i class="fa-solid fa-circle fa-stack-2x "></i>
+                              <i class="fa-solid fa-folder-closed fa-stack-1x fa-inverse"></i>
+                            </span>
+                            <h4 class="card-text text-center mt-4"><sup>$</sup>42<sub>/month</sub></h4>
+                            <div class="small-text text-center mb-4"> $499/year</div>
+                                  <table class="mb-4">
+                                      <tr>
+                                          <td><i class="fa-solid fa-circle-check"></i></td>
+                                          <td class="ps-3">Up to 5 users</td>
+                                      </tr>
+                                      <tr>
+                                          <td><i class="fa-solid fa-circle-check"></i></td>
+                                          <td class="ps-3">120+ components</td>
+                                      </tr>
+                                      <tr>
+                                          <td><i class="fa-solid fa-circle-check"></i></td>
+                                          <td class="ps-3">Basic support on GitHub</td>
+                                      </tr>
+                                      <tr>
+                                        <td><i class="fa-solid fa-circle-check"></i></td>
+                                        <td class="ps-3">Monthly Updates</td>
+                                    </tr>
+                                    <tr>
+                                        <td><i class="fa-solid fa-circle-check"></i></td>
+                                        <td class="ps-3">Integrations</td>
+                                    </tr>
+                                  </table>
+                            <a href="#" class="btn btn-primary">Get started for free</a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-sm-4">
+                        <div class="card">
+                          <div class="card-body text-center">
+                            <h5 class="card-title text-center">ENTERPRISE</h5>
+                            <span class ="fa-2x fa-stack py-3">
+                              <i class="fa-solid fa-circle fa-stack-2x "></i>
+                              <i class="fa-solid fa-briefcase fa-stack-1x fa-inverse"></i>
+                            </span>
+                            <h4 class="card-text text-center mt-4"><sup>$</sup>84<sub>/month</sub></h4>
+                            <div class="small-text text-center mb-4"> $999/year</div>
+                                  <table class="mb-4">
+                                      <tr>
+                                          <td><i class="fa-solid fa-circle-check"></i></td>
+                                          <td class="ps-3">Up to 10 users</td>
+                                      </tr>
+                                      <tr>
+                                          <td><i class="fa-solid fa-circle-check"></i></td>
+                                          <td class="ps-3">150+ components</td>
+                                      </tr>
+                                      <tr>
+                                          <td><i class="fa-solid fa-circle-check"></i></td>
+                                          <td class="ps-3">Basic support on GitHub</td>
+                                      </tr>
+                                      <tr>
+                                        <td><i class="fa-solid fa-circle-check"></i></td>
+                                        <td class="ps-3">Monthly Updates</td>
+                                    </tr>
+                                    <tr>
+                                        <td><i class="fa-solid fa-circle-check"></i></td>
+                                        <td class="ps-3">Integrations</td>
+                                    </tr>
+                                    <tr>
+                                        <td><i class="fa-solid fa-circle-check"></i></td>
+                                        <td class="ps-3">Product support</td>
+                                    </tr>
+                                    <tr>
+                                        <td><i class="fa-solid fa-circle-check"></i></td>
+                                        <td class="ps-3">API access</td>
+                                    </tr>
+                                    <tr>
+                                        <td><i class="fa-solid fa-circle-check"></i></td>
+                                        <td class="ps-3">Speedy building tool</td>
+                                    </tr>
+                                  </table>
+                            <a href="#" class="btn btn-primary">Get started for free</a>
+                          </div>
+                        </div>
+                      </div>
+                  </div>
+            </div>
+        </div>
+    </div>
+    <button class="buy">Buy Now</button>
+</body>
+</html>

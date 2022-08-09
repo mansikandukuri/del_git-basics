@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Good Vibes Form</title>
+        <style>
+            .container{
+              text-align: center;
+              background-color: rgb(234, 239, 215);
+              margin-left: 200px;
+              margin-right: 200px;
+            }
+            .form{
+                text-align: center;
+            }
+            .table{
+                margin-left: 100px;
+                margin-right: 100px;
+            }
+        </style>
+      
+    </head>
+    <body style="text-align: center" >
+    <div class="container">
+        
+        <h1 style ="background-color: rgb(197, 246, 2); margin:0px">Good Vibes Form</h1>
+        Tell us something positive that happened to you today.
+       <form class="form">
+       <table align="center" class="table">
+    
+        <tbody>
+            <tr >
+                <td align="right">
+                    <label for="username"> Name: </label>
+                </td>
+                <td align="left">
+                    <input type="text" name="username" placeholder="Enter your name" >
+                </td>
+            </tr>
+            <tr>
+                <td align="right">
+                    <label for="email"> Email:  </label>
+                </td>
+                <td align="left">
+                    <input type="email" name="email" placeholder="Enter your email id">
+                </td>
+            </tr>
+            <tr>
+                <td align="right">
+                    <label for="scale"> On a scale of 1 to 10, how good was it?: </label>
+                </td >
+                <td align="left">
+                    <input type="number" name="scale" min="1" max="10" placeholder="Enter a number between 1 and 10">
+                </td>
+            </tr>
+            <tr>
+                <td align="right">
+                    Where did it happen?:
+                </td>
+                <td align="left">
+                    <select name = "dropdown">
+                        <option value = "At home" selected>At home</option>
+                        <option value = "At the office">At the office</option>
+                        <option value = "Elsewhere">Elsewhere</option>
+                     </select>
+                </td>
+            </tr>
+            <tr>
+                <td align="right">
+                    At what time of the day did it happen?: 
+                </td>
+                <td align="left">
+                    <input type="radio" name="time" value="Morning">
+                    <label for="time">Morning</label><br>
+                    <input type="radio" name="time" value="Afternoon">
+                    <label for="time">Afternoon</label><br>
+                    <input type="radio" name="time" value="Evening">
+                    <label for="time">Evening</label><br>
+                </td>
+            </tr>
+            <tr>
+                <td align="right">
+                    What emotions did you experience? (Select all that apply): 
+                </td>
+                <td align="left">
+                    <input type="checkbox" name="emotions" value="Excited">
+                    <label for="emotions">Excited</label><br>
+                    <input type="checkbox" name="emotions" value="Humbled">
+                    <label for="emotions">Humbled</label><br>
+                    <input type="checkbox" name="emotions" value="Elated">
+                    <label for="emotions">Elated</label><br>
+                    <input type="checkbox" name="emotions" value="Loved">
+                    <label for="emotions">Loved</label><br>
+                    <input type="checkbox" name="emotions" value="Enthusiastic">
+                    <label for="emotions">Enthusiastic</label><br>
+                </td>
+            </tr>
+           
+            <tr>
+                <td align="right">
+                    <label for="search"> Please describe your positive experience: </label>
+                </td>
+                <td align="left">
+                    <input type="search" name="search">
+                </td>
+           
+        </tbody>
+        </table>
+        <input type="submit" value="Submit form">
+       </form>
+    </div>
+    </body>
+
+</html>

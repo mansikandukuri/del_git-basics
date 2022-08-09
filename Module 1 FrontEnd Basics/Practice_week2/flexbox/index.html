@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox Demo</title>
+    <style>
+        .container
+        {
+            width: 600px;
+            margin: 40px auto;
+            background-color: gray;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 30px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            /* justify-content: space-between; */
+        }
+        .e1
+        {
+            background-color: rgb(253, 69, 69);
+        }
+        .e2
+        {
+            background-color: rgb(240, 187, 73);
+        }
+        .e3
+        {
+            background-color: rgb(170, 244, 24);
+            height: 120px;
+        }
+        .e4
+        {
+            background-color: rgb(10, 236, 244);
+
+        }
+        .e5
+        {
+            background-color: rgb(172, 141, 239);
+            /* order: 1; */
+        }
+        .e6
+        {
+            background-color: rgb(241, 3, 222);
+            /* order: -1; */
+        }
+        .container2
+        {
+            width: 80vw;
+            margin: 40px auto;
+            background-color: gray;
+            display: flex;
+            flex-wrap: wrap;
+            align-content: flex-end;
+            gap: 10px;
+        }
+        .box
+        {
+            background-color: white;
+            border: 2px black solid;
+        }
+        .box1
+        {
+            /* flex-grow: 1; */
+            flex-basis: 120px;
+        }
+        .box2
+        {
+            /* flex-grow: 1; */
+            flex-basis: 700px;
+        }
+        .box3
+        {
+            flex-grow: 1;
+        }
+        .box4
+        {
+            flex-grow: 1;
+        }
+    </style>
+</head>
+<body>
+    <!-- <div class="container">
+        <div class="e1">HTML</div>
+        <div class="e2">and</div>
+        <div class="e3">CSS</div>
+        <div class="e4">are</div>
+        <div class="e5">amazingly</div>
+        <div class="e6">wonderful</div>
+    </div> -->
+    <div class="container2">
+    <div class="box box1">
+        <h1>Box 1</h1>
+        <p>Lorem ipsum dolor sit amet.</p>
+    </div>
+    <div class=" box box2">
+        <h1>Box 2</h1>
+        <p>Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.</p>
+    </div>
+    <div class=" box box3">
+        <h1>Box 3</h1>
+        <p>Lorem ipsum dolor sit amet. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Totam, laudantium.</p>
+    </div>
+    <div class="box box4">
+        <h1>Box 4</h1>
+        <p>Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Autem veniam tempora eligendi odit, quidem deserunt?</p>
+    </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,60 @@
+.container-home-page{
+    max-width: 90rem;
+    height: 64rem;
+    background: #E6DFD3;
+}
+
+.home-nav{
+    font-family: 'Notable';
+    font-weight: 400;
+    padding: 2rem;
+    display: flex;
+    justify-content: end;
+    right: 0;
+}
+.big-logo{
+    position: relative;
+    padding-top: 10rem;
+    left: 40%;
+    width: 50%;
+}
+.hero{
+    background: url("images/Subtractbigrecord.png");
+    background-size: cover;
+}
+.branding{
+    font-family: 'Notable';
+    position: absolute;
+    top: 29rem;
+    font-weight: 400;
+}
+.about-us{
+    width: 60rem;
+    font-family: 'Notable';
+    position: absolute;
+    top: 50rem;
+    left: -18rem;
+    font-weight: 400;
+}
+.container-second-page{
+    max-width: 90rem;
+    height: 40rem;
+    background: #ACB4B8;
+}
+.home-nav-1{
+    font-family: 'Notable';
+    font-weight: 400;
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    position: fixed;
+}
+
+.add-font{
+    font-family: 'Notable';
+    font-weight: 400;
+    text-align: center;
+    color: #666E72;
+    margin-top: 6rem;
+}

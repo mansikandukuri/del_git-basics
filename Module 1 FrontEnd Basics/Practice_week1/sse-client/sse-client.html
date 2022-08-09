@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SSE Client</title>
+</head>
+<body>
+    <script>
+        var stockPrice = document.getElementById("stock-price")
+        if(window.EventSource)
+        {
+            var source = new EventSource("http://localhost:3000")
+            source.addEventListener("open", function(){
+                console.log("connected")    
+            })
+            source.addEventListener("message", function(event){
+                if(event.data>101)
+                {
+                    stockPrice = "⬆" + event.data
+                }
+                else
+                {
+                    stockPrice = "⬇" + event.data
+                }
+            })
+        }
+        else
+        {
+            alert("SSE not supported by your browser")
+        }
+    </script>
+</body>
+</html>

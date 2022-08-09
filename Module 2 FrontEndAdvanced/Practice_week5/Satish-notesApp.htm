@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- CSS only -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="satish-notes-app/notes.css" />
+    <script src="../vendors/jquery-3.6.0.min.js"></script>
+    <title>Notes App</title>
+
+    <script>
+      const baseURL = "http://localhost:3000/list";
+
+      $(document).ready(function () {
+        $("#addList").click(function () {
+          var itemName = $("#itemTitle").val();
+          var amountEntered = $("#inputAmount").val();
+          var dateEntered = $("#date").val();
+          var year = dateEntered.toString().substring(0, 4);
+          console.log(year);
+          console.log(itemName);
+          console.log(amountEntered);
+          console.log(dateEntered);
+          fetch(`${baseURL}`, {
+            method: "POST",
+            body: JSON.stringify({
+              title: itemName,
+              amount: amountEntered,
+              date: dateEntered,
+              year: year,
+            }),
+            headers: {
+              Accept: "application/json",
+              "Content-Type": "application/json",
+            },
+          })
+            .then((response) => response.json())
+            .then((result) => {console.log("RESULT : ", result)
+        display()})
+            .catch(console.error);
+        });
+
+        $("#cancleBtn").click(function () {
+          fetch(`${baseURL}`)
+            .then((response) => response.json())
+            .then((users) => console.log(users))
+            .catch(console.error);
+        });
+      
+
+        $(".showForm").click(function () {
+          $(this).css("display", "none");
+          $(".hideForm").css("display", "block");
+          $(".formDiv").css("display", "flex");
+        });
+        $(".hideForm").click(function () {
+          $(this).css("display", "none");
+          $(".showForm").css("display", "block");
+          $(".formDiv").css("display", "none");
+        });
+
+        function display(x) {
+            console.log("adcad",x)
+          var fullDta;
+          $(".displayItems").html("");
+          fetch(`${baseURL}`)
+            .then((response) => response.json())
+            .then((users) => {
+              for (let i = 0; i < users.length; i++) {
+                console.log(users[i]);
+                console.log("yes",users[i].year)
+                if(x==users[i].year){
+                    console.log("entred")
+                $(".displayItems").append(`<div class="shopList">
+          <div class="card">
+            <div class="card-header">${users[i].title}</div>
+            <div class="card-body">
+              <h5 class="card-title">Amount :$ ${users[i].amount}</h5>
+              <h5 class="card-title">date :$ ${users[i].date}</h5>
+              
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+        </div>`);
+              }}
+            })
+            .catch(console.error);
+        }
+
+       $(".years").change(function(){
+        console.log("change")
+        console.log($(this).val())
+        var sr=$(this).val()
+        display(sr)
+       })
+
+
+      });
+    </script>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Notes App</h1>
+      <div class="nav">
+        <div class="emptyNav"></div>
+        <button type="button" class="btn btn-dark showForm">Show Form</button>
+        <button type="button" class="btn btn-dark hideForm">Hide Form</button>
+
+        <select name="years" class="years" id="">
+          <option class="opt" value="2022">2022</option>
+          <option class="opt" value="2021">2021</option>
+          <option class="opt" value="2020">2020</option>
+          <option class="opt" value="2019">2019</option>
+        </select>
+      </div>
+
+      <!-- forms -->
+      <div class="formDiv">
+        <form class="form">
+          <h6>Add New Note</h6>
+          <div class="mb-3">
+            <label for="itemTitle" class="form-label">Title :</label>
+            <input type="text" class="form-control" id="itemTitle" />
+          </div>
+          <div class="mb-3">
+            <label for="inputAmount" class="form-label">Amount :</label>
+            <input type="text" class="form-control" id="inputAmount" />
+          </div>
+          <div class="mb-3">
+            <label class="form-label" for="exampleCheck1">Date</label>
+            <input type="date" class="form-control" id="date" />
+          </div>
+          <div class="formBtn">
+            <button type="button" class="btn btn-primary" id="addList">
+              Add
+            </button>
+            <button type="button" class="btn btn-warning" id="cancleBtn">
+              Cancle
+            </button>
+            <!-- <button type="button" class="btn btn-warning" id="fetch"> -->
+              fetch
+            </button>
+          </div>
+        </form>
+      </div>
+      <div class="displayItems">
+        <!-- <div class="shopList">
+          <div class="card">
+            <div class="card-header">Featured</div>
+            <div class="card-body">
+              <h5 class="card-title">Special title treatment</h5>
+              <p class="card-text">
+                With supporting text below as a natural lead-in to additional
+                content.
+              </p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+        </div> -->
+      </div>
+    </div>
+  </body>
+</html>

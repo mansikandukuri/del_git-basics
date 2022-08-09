@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Favourite Colour</title>
+    <style>
+        .container{
+            text-align: center;
+        }
+        .bg{
+            background-color: newbg;
+        }
+    </style>
+</head>
+<body class="container">
+    <h1>Favourite Background Colour</h1>
+    <label name="color" id="color">Favourite Color: </label>
+    <select name = "dropdown" id="dropdown">
+        <option value = "Red" onclick="onSelect(event)">Red</option>
+        <option value = "Blue" onclick="onSelect(event)">Blue</option>
+        <option value = "Green" onclick="onSelect(event)">Green</option>
+        <option value = "Yellow" onclick="onSelect(event)">Yellow</option>
+     </select>
+     <br>
+     <br>
+     <input type="submit" value="Submit" id="submit" name="submit" onclick="onSelect(event)">
+
+     <script>
+
+        var colorField = document.getElementById("color");
+
+        if(localStorage.getItem("user"))
+        {
+            var newbg=JSON.parse(localStorage.getItem("user"));
+            <div class="bg"></div>
+        }
+
+
+
+
+        // if(localStorage.getItem("user")){
+        //     var userObj = JSON.parse(localStorage.getItem("user"));
+        //     messageHeading.innerHTML = "Hello" + userObj.email + " you are already logged in"
+        // }
+        // else{
+        //     messageHeading.innerHTML = "Please login!"
+        // }
+
+
+        function onSelect(event){
+            event.preventDefault();
+            colorField = document.getElementById("dropdown");
+            console.log(colorField.value);
+            localStorage.setItem("users", JSON.stringify({color: colorField.value}))
+        }
+
+
+        // function onLogin(event){
+        //     event.preventDefault();
+        //     paragraphE1.innerHTML="<span>"+emailField.value;
+        //     console.log("Password : " + passwordField.value);
+        //     localStorage.setItem("users", JSON.stringify({email: emailField.value,
+        //         password: passwordField.value})                 
+        //     )
+        //     document.body.appendChild(paragraphE1);
+        // }
+
+
+    </script>
+
+</body>
+</html>

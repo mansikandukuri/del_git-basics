@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>String Concatenation</title>
+  </head>
+  <body>
+    <h1>String Concatenation</h1>
+    <script>
+      var greeting = "Hello ";
+      var name = "World";
+      var word = greeting + name;
+      var string = "";
+      for (i = 0; i < word.length; i++) {
+        if (word[i] == "l") {
+          string += "1";
+        } else if (word[i] == "o") {
+          string += "0";
+        } else {
+          string += word[i];
+        }
+      }
+      console.log(string);
+    </script>
+  </body>
+</html>

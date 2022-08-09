@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amogh ASMR</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="amogh.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Notable&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- AMOGH -->
+    <div class="row">
+        <div class="hero">
+            <div class="container-home-page">
+                <nav class="navbar px-5 home-nav-1">
+                    <img src="images/Logosmall.png" alt="">
+                    <a class="navbar-brand" href="#">
+                      <button class="btn nav-home">Menu</button>
+                    </a>
+                </nav>
+                <div class="big-logo">
+                    <img class="mt-2" src="images/Logo.png" alt="">
+                    <p class="branding">We set the mood</p>
+                    <p class="about-us">We sell carefully pressed vinyls for the best music listeners in the world</p>
+                </div>
+            </div>
+        </div>
+        <div class="container-second-page">
+            <nav class="navbar px-5 home-nav-1">
+                <img src="images/Logosmall.png" alt="">
+                <a class="navbar-brand" href="#">
+                  <button class="btn nav-home">Menu</button>
+                </a>
+            </nav>
+            <p class="text-center add-font fs-2">Vintage or latest, We have got them all</p>
+            <div class="row" style="width:auto; padding-left: 14rem;">
+                <div class="card" style="width: 18rem;">
+                    <img src="images/Bornintheusa.jpg" class="card-img-top" alt="...">
+                </div>
+                <div class="card" style="width: 18rem;">
+                    <img src="images/abbeyssroad.jpg" class="card-img-top" alt="...">
+                </div>
+                <div class="card" style="width: 18rem;">
+                    <img src="images/pinkfloyddarkside.jpg" class="card-img-top" alt="...">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- MANSI
+    <div class="records">
+        <div class="records-text">
+            #1
+        </div>
+        <div class="records-image">
+            <img src="vinyl_PNG63.png">
+        </div>
+
+    </div> -->
+
+
+</body>
+<script>
+    var scale = chroma.scale(['#1abc9c', '#e74c3c']).domain([0, $(document).height(50)]);
+    $(window).on('scroll', function () {
+    $('.container-second-page').css('background-color', scale(window.pageYOffset));
+});
+</script>
+</html>

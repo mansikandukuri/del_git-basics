@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arrays</title>
+  </head>
+  <body>
+    <h1>ARRAYS</h1>
+    <h2>Julia and her dogs again.</h2>
+
+    <script>
+      var ages = [5, 2, 4, 1, 15, 8, 3];
+      var humanAge = [];
+      var sum = 0;
+      var flag = 0;
+
+      function calcAverageHumanAge(ages) {
+        for (var i = 0; i < ages.length; i++) {
+          if (ages[i] <= 2) {
+            humanAge[i] = 2 * ages[i];
+          } else {
+            humanAge[i] = 16 + 4 * ages[i];
+          }
+        }
+
+        if (humanAge[i] >= 18) {
+          sum += humanAge[i];
+          flag += 1;
+        }
+        avg = sum / flag;
+        return avg;
+      }
+      calcAverageHumanAge(ages);
+      console.log(avg);
+    </script>
+  </body>
+</html>

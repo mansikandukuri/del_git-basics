@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>jQuery</title>
+    <script src="/module2-jQuery/vendors/jquery-3.6.0.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("body").css({ "background-color": "pink", color: "blue" });
+        // $("body").html(
+        //   "<p>New Text : Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quasi explicabosit, repellendus repellat ipsum dolore consequatur ullam, minima saepequod voluptatum natus fuga, dolorem veniam inventore at non.</p> <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quasi explicabosit, repellendus repellat ipsum dolore consequatur ullam, minima saepequod voluptatum natus fuga, dolorem veniam inventore at non.</p> <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quasi explicabosit, repellendus repellat ipsum dolore consequatur ullam, minima saepequod voluptatum natus fuga, dolorem veniam inventore at non.</p> <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quasi explicabosit, repellendus repellat ipsum dolore consequatur ullam, minima saepequod voluptatum natus fuga, dolorem veniam inventore at non.</p>"
+        // );
+        $("body").append(
+          "<br><br><a><div>MORE TEXT MORE TEXT MORE TEXT MORE TEXT</div></a>"
+        );
+        $("a").attr("href", "https://www.w3schools.com/");
+
+        $("p").click(function () {
+          $(this).css("color", "red");
+        });
+        $("input").keyup(function () {
+          var tex = $("input").val();
+          alert(tex);
+          $(".cont").append(`<div>${tex}</div>`);
+        });
+        $("p").hover(function () {
+          $(this).append("OVER");
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <h1>Getting Started</h1>
+    <button id="btn">Click</button>
+    <ul>
+      <li>Tea</li>
+      <li>Coffe</li>
+      <li>Milk</li>
+    </ul>
+    <div>
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quasi
+        explicabo sit, repellendus repellat ipsum dolore consequatur ullam,
+        minima saepe quod voluptatum natus fuga, dolorem veniam inventore at
+        non.
+      </p>
+      <p>
+        New Text : Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+        Quasi explicabosit, repellendus repellat ipsum dolore consequatur ullam,
+        minima saepequod voluptatum natus fuga, dolorem veniam inventore at non.
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quasi
+        explicabosit, repellendus repellat ipsum dolore consequatur ullam,
+        minima saepequod voluptatum natus fuga, dolorem veniam inventore at non.
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quasi
+        explicabosit, repellendus repellat ipsum dolore consequatur ullam,
+        minima saepequod voluptatum natus fuga, dolorem veniam inventore at non.
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quasi
+        explicabosit, repellendus repellat ipsum dolore consequatur ullam,
+        minima saepequod voluptatum natus fuga, dolorem veniam inventore at non.
+      </p>
+      <input type="text" class="text" />
+      <!-- <button class="enter">Enter</button> -->
+      <div class="cont"></div>
+    </div>
+  </body>
+</html>

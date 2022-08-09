@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+    />
+    <script src="/notes-app/vendors/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
+    <style>
+      .delete-btn:hover {
+        background-color: rgb(192, 0, 0);
+      }
+    </style>
+    <title>Notes App</title>
+  </head>
+  <body style="font-family: montserrat" ;>
+    <div class="mt-4">
+      <div
+        class="text-center"
+        style="font-weight: 100; font-size: 3rem; font-stretch: extra-condensed"
+      >
+        Notes App
+      </div>
+      <div class="d-flex row px-3 mb-2">
+        <div class="col-4"></div>
+        <div class="d-grid gap-2 col-4 mx-auto">
+          <button
+            class="btn btn-primary"
+            id="show-btn"
+            style="background-color: rgb(58, 58, 58); color: white; border: 0"
+            type="submit"
+          >
+            Show Form
+          </button>
+          <button
+            class="btn btn-primary"
+            id="hide-btn"
+            style="
+              background-color: rgb(58, 58, 58);
+              color: white;
+              border: 0;
+              display: none;
+            "
+            type="submit"
+          >
+            Hide form
+          </button>
+        </div>
+        <div class="d-grid gap-2 col-4 mx-auto">
+          <div class="text-end me-5">
+            <select
+              name="years"
+              style="width: 85%; height: 100%; border-radius: 0.4rem"
+            >
+              <option value="2022">2022</option>
+              <option value="2021">2021</option>
+              <option value="2020">2020</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="form p-3"
+      style="
+        width: 40%;
+        margin: auto;
+        border: 0.001rem rgb(174, 174, 174) solid;
+        border-radius: 0.5rem;
+        font-size: 0.9rem;
+        display: none;
+      "
+    >
+      <div class="text-center m-1" style="font-weight: 600">Add New Note</div>
+      <form>
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">Title : </label>
+          <input
+            type="text"
+            class="form-control formTitle"
+            id="exampleInputEmail1"
+            aria-describedby="emailHelp"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label">Amount :</label>
+          <input
+            type="number"
+            class="form-control formAmount"
+            id="exampleInputPassword1"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label">Date :</label>
+          <input
+            type="date"
+            class="form-control formDate"
+            style="color: rgb(99, 99, 99); font-size: 0.8rem"
+            id="exampleInputPassword1"
+          />
+        </div>
+        <div
+          class="d-flex text-center gap-2"
+          style="justify-content: space-around"
+        >
+          <button
+            type="submit"
+            class="btn btn-primary d-grid col-6 add-btn"
+            style="font-weight: 500"
+          >
+            Add
+          </button>
+          <button
+            type="submit"
+            class="btn btn-primary d-grid col-6 cancel-btn"
+            style="
+              background-color: rgb(255, 187, 0);
+              border: rgb(255, 187, 0);
+              color: black;
+              font-weight: 500;
+            "
+          >
+            Cancel
+          </button>
+        </div>
+      </form>
+    </div>
+    <div class="lists row m-3 mx-5">
+      <!-- <div class="col-sm-4">
+        <div class="card p-0">
+          <div
+            style="
+              background-color: rgb(234, 234, 234);
+              border-radius: 0.3rem 0.3rem 0 0;
+              border-bottom: 0.1rem rgb(196, 196, 196) solid;
+              height: 3rem;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              padding-top: 0.5rem;
+            "
+          >
+            <h5 class="card-title text-cente" style="font-weight: 700">
+              SHOPPING
+            </h5>
+          </div>
+          <div class="card-body">
+            <p class="card-text">amount</p>
+            <p class="card-text">amount</p>
+            <button
+              type="submit"
+              class="btn btn-primary d-grid col-12 delete-btn"
+              style="
+                font-weight: 500;
+                height: 2rem;
+                border-radius: 0.2rem;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 0;
+                background-color: rgb(223, 65, 65);
+                border: 0;
+              "
+            >
+              DELETE
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="card p-0">
+          <div
+            style="
+              background-color: rgb(234, 234, 234);
+              border-radius: 0.3rem 0.3rem 0 0;
+              border-bottom: 0.1rem rgb(196, 196, 196) solid;
+              height: 3rem;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              padding-top: 0.5rem;
+            "
+          >
+            <h5 class="card-title text-cente" style="font-weight: 700">
+              SHOPPING
+            </h5>
+          </div>
+          <div class="card-body">
+            <p class="card-text">amount</p>
+            <p class="card-text">amount</p>
+            <button
+              type="submit"
+              class="btn btn-primary d-grid col-12"
+              id="delete-btn"
+              style="
+                font-weight: 500;
+                height: 2rem;
+                border-radius: 0.2rem;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 0;
+                background-color: rgb(223, 65, 65);
+                border: 0;
+              "
+            >
+              DELETE
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="card p-0">
+          <div
+            style="
+              background-color: rgb(234, 234, 234);
+              border-radius: 0.3rem 0.3rem 0 0;
+              border-bottom: 0.1rem rgb(196, 196, 196) solid;
+              height: 3rem;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              padding-top: 0.5rem;
+            "
+          >
+            <h5 class="card-title text-cente" style="font-weight: 700">
+              SHOPPING
+            </h5>
+          </div>
+          <div class="card-body">
+            <p class="card-text">amount</p>
+            <p class="card-text">amount</p>
+            <button
+              type="submit"
+              class="btn btn-primary d-grid col-12 delete-btn"
+              style="
+                font-weight: 500;
+                height: 2rem;
+                border-radius: 0.2rem;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 0;
+                background-color: rgb(223, 65, 65);
+                border: 0;
+              "
+            >
+              DELETE
+            </button>
+          </div>
+        </div>
+      </div> -->
+    </div>
+  </body>
+</html>

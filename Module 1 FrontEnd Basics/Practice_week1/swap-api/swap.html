@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body >
+    <style>
+        .container{
+            width: 100px;
+            height: 20px;
+            border: 2px solid rgb(50, 50, 50);
+            border-radius: 5px;
+            background-color: rgb(198, 195, 195);
+        }
+
+        .main{
+            display: flex;
+            column-gap: 20px;
+            
+        }
+
+    </style>
+    <div class="main">
+    <div class="container" id="a" draggable="true">A</div>
+    <div class="container" id="b" draggable="true">B</div>
+    <div class="container" id="c" draggable="true">C</div>
+    </div>
+
+    <script>
+
+        
+
+        // var img = document.getElementById("img1")
+        // var divE1 = document.getElementById("container")
+
+        // img.addEventListener("dragstart",function(event){
+        //     console.log("Dragging started, event")
+        //     event.dataTransfer.dropEffect = "move"
+        //     event.dataTransfer.setData("text",event.target.id)
+        // })
+
+        // divE1.addEventListener("dragover",function(event){
+        //     event.preventDefault();
+        //     //console.log("DRAG OVER")
+        // })
+
+        // divE1.addEventListener("drop",function(event){
+        //     var imageID = event.dataTransfer.getData("text");
+        //     const imageE1 = document.getElementById(imageID)
+        //     event.target.appendChild(imageE1);
+        // })
+
+    </script>
+
+
+</body>
+</html>

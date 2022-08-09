@@ -1,0 +1,578 @@
+.main
+{
+    width: 61%;
+    background-color: aliceblue;
+    margin: auto;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.main-font
+{
+    font-size: 0.7rem;
+}
+.container1
+{
+    display: flex;
+}
+.image
+{
+    display: flex;
+    flex-direction: column;
+    font-size: 0.6rem;
+}
+.custID
+{
+    border: 0.1rem black solid;
+    width: 22rem;
+    font-size: 0.9rem;
+    margin-left: 0.5rem;
+}
+.custID1
+{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 0.1rem black solid;
+    padding: 0.2rem;
+    
+}
+.custID2
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.2rem;
+}
+.custID-input
+{
+    display: flex;
+    column-gap: 0;
+}
+.input-field
+{
+    max-width: 1.1rem;
+    max-height: 1.1rem;
+    border-radius: 0;
+    margin-left: 0.0001rem;
+    border: 0.01rem rgb(132, 128, 128) solid;
+    text-align: center;
+    padding: 0.2rem;
+}
+.input-field-table
+{
+    max-width: 0.9rem;
+    max-height: 0.9rem;
+    border-radius: 0;
+    margin-left: 0.0001rem;
+    border: 0.01rem rgb(132, 128, 128) solid;
+    text-align: center;
+}
+.input-text
+{
+    text-decoration: none;
+    border-bottom: 0.1rem black solid;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    margin-right: 0.4rem;
+}
+.container1-text
+{
+    font-size: 0.7rem;
+    color: brown;
+}
+.heading
+{
+    background-color: rgb(228, 219, 212);
+    color: #123456;
+    font-weight: 700;
+    font-size: 0.8rem;
+    display: flex;
+    justify-content: center;
+    padding: 0.2rem;
+}
+.star
+{
+    color: brown;
+}
+.container2
+{
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.5rem;
+}
+.container2-mini
+{
+    display: flex;
+    padding-bottom: 0.5rem;
+}
+.container2-left
+{
+    width: 31rem;
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.5rem;
+}
+.container2-1
+{
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.6rem;
+    margin-top:0.5rem;
+}
+.container2-1-item
+{
+    display: flex;
+    align-items: center;
+    column-gap: 0.2rem;
+}
+
+.container2-2
+{
+    display: flex;
+    /* justify-content: space-between; */
+    font-size: 0.6rem;
+    width:31rem;
+}
+.container2-2-item1
+{
+    background-color: rgb(228, 219, 212);
+    color: #123456;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width:6rem;
+    font-size: 0.8rem;
+    padding-left: 0.2rem;
+    
+}
+.ikit
+{
+    display: flex;
+    align-items: center;
+    column-gap: 0.3rem;
+    padding-right: 5.6rem ;
+    padding-left: 2.8rem ;
+}
+.non-ikit
+{
+    display: flex;
+    align-items: center;
+    column-gap: 0.3rem;
+    /* padding-left: 3rem; */
+    /* padding-right: 5rem ; */
+}
+.container2-3
+{
+    display: flex;
+    /* justify-content: space-between; */
+    font-size: 0.7rem;
+    width:31rem;
+}
+.container2-3-item1
+{
+    background-color: rgb(228, 219, 212);
+    color: #123456;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width:9rem;
+    font-size: 0.8rem;
+    padding-left: 0.2rem;
+    margin-right: 0.4rem;
+}
+.at
+{
+    color: black;
+    font-weight: 300;
+    padding-bottom: 0.5rem;
+}
+.container2-4
+{
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.7rem;
+    width:31rem;
+}
+.input-text-con2-4
+{
+    text-decoration: none;
+    border-bottom: 0.1rem black solid;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    margin-right: 0.4rem;
+    max-width: 8rem;
+}
+.container2-5
+{
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.7rem;
+    width:31rem;
+}
+.input-text-con2-5
+{
+    text-decoration: none;
+    border-bottom: 0.1rem black solid;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    margin-right: 0.4rem;
+    width: 17rem;
+}
+.container2-right
+{
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.5rem;
+    padding-left: 3rem;
+}
+.signature
+{
+    border: 0.1rem lightgray solid;
+    text-align: center;
+    padding: 1.5rem;
+    font-size: 0.7rem;
+    color: lightgray;
+}
+.signature-text
+{
+    text-align: right;
+    font-size: 0.6rem;
+    padding-left: 2rem;
+}
+.container3
+{
+    display: flex;
+    flex-direction: column;
+    /* row-gap: 0.5rem; */
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+.container3-1
+{
+    display: flex;
+    justify-content: space-between;
+}
+.container3-1-left
+{
+    font-size: 0.7rem;
+    width: 13rem;
+}
+.container3-1-right
+{
+    column-gap: 0.01rem;
+    row-gap: 0.05;
+    width: 50rem;
+}
+.title
+{
+    display: flex;
+}
+.small-text
+{
+    font-size: 0.4rem;
+}
+.container3-2
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.container3-3
+{
+    display: flex;
+}
+.container3-4
+{
+    display: flex;
+    column-gap: 1.1rem;
+}
+.container4
+{
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.2rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+.container4-1
+{    
+    display: flex;
+    align-items: center;
+    column-gap: 1rem;
+}
+.particulars
+{
+    display: flex;
+    align-items: center;
+}
+.container4-2
+{
+    display: flex;
+    column-gap: 0.2rem;
+    justify-content: right;
+    /* justify-content: end; */
+}
+.container4-3
+{
+    display: flex;
+    column-gap: 1.2rem;
+}
+.container4-4
+{
+    display: flex;
+    column-gap: 0.5rem;
+    align-items:center ;
+}
+.pin
+{
+    display: flex;
+}
+.container4-5
+{
+    display: flex;
+    column-gap: 0.5rem;
+    align-items:center ;
+}
+.mobile
+{
+    display: flex;
+    padding-left: 7.1rem;
+}
+.container4-6
+{
+    display: flex;
+    column-gap: 0.5rem;
+    align-items:center ;
+}
+.email
+{
+    font-size: 0.7rem;
+    padding-left: 0.6rem;
+}
+.container4-7
+{
+    display: flex;
+    column-gap: 0.2rem;
+    justify-content: right;
+    padding-right: 0.1rem;
+    /* justify-content: end; */
+}
+.container5
+{
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.2rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+.container5-1
+{
+    display: flex;
+    column-gap: 0.7rem;
+    align-items: center;
+}
+.yes
+{
+    display: flex;
+    align-items: center;
+    font-size: 0.7rem;
+}
+.pan
+{
+    background-color: rgb(228, 219, 212);
+    color: #123456;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width:9rem;
+    font-size: 0.8rem;
+    padding-left: 0.2rem;
+}
+.container5-2
+{
+    display: flex;
+    align-items: center;
+    column-gap: 0.5rem;
+}
+.container6
+{
+    display: flex;
+    flex-direction: column;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    row-gap: 0.5rem;
+    font-size: 0.7rem;
+}
+.container6-1
+{
+    display: flex;
+    column-gap: 1rem;
+    justify-content: space-between;
+    align-items: center;
+}
+.container6-2
+{
+    display: flex;
+    column-gap: 1rem;
+    align-items: center;
+}
+.only-for
+{
+    display: flex;
+    align-items: center;
+    column-gap: 0.1rem;
+}
+.container6-2-item
+{
+    background-color: rgb(228, 219, 212);
+    padding: 0.1rem;
+}
+.container7
+{
+    display: flex;
+    flex-direction: column;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    row-gap: 0.5rem;
+    font-size: 0.7rem;
+}
+.container7-1
+{
+    display: flex;
+    column-gap: 1rem;
+    justify-content: space-between;
+    align-items: center;
+}
+.container7-2
+{
+    display: flex;
+    column-gap: 1rem;
+    align-items: center;
+    padding-left: 4.45rem;
+    border-bottom: 0.1rem rgb(212, 210, 210) solid;
+    padding-bottom: 0.3rem;
+}
+.container7-3
+{
+    display: flex;
+    column-gap: 1rem;
+    align-items: center;
+    padding-bottom: 0.3rem;
+}
+.heading2
+{
+    background-color: rgb(228, 219, 212);
+    color: #123456;
+    font-weight: 500;
+    font-size: 0.7rem;
+    display: flex;
+    margin-bottom: 0.5rem;
+}
+.container8-text
+{
+    font-size: 0.7rem;
+    text-align: center;
+}
+.container8
+{
+    font-size: 0.7rem;
+}
+.table
+{
+    border: 0.01rem black solid;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    /* padding: 0.5rem; */
+}
+.table-head
+{
+    background-color: rgb(180, 179, 179);
+    font-weight: 700;
+}
+.photo
+{
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.5rem;
+    text-align: center;
+    align-items: center;
+}
+.box
+{
+    border: 0.1rem lightgray solid;
+    padding: 1.5rem;
+    padding-left: 4rem;
+    padding-right: 4rem;
+    color: lightgray;    
+}
+.signature-box
+{
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.5rem;
+    align-items: center;
+}
+.email-box
+{
+    height: 7rem;
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.3rem;
+}
+.email-box-1
+{
+    display: flex;
+    column-gap: 1rem;
+    padding-top: 0.3rem;
+    padding-bottom: 0.1rem;
+}
+.email-box-2
+{
+    padding-left: 2.55rem;
+    padding-top: 0.1rem;
+    padding-bottom: 0.1rem;
+}
+.email-box-3
+{
+    display: flex;
+    align-items: center;
+    align-content: center;
+    padding-bottom: 0.5rem;
+    padding-top: 0.1rem;
+    column-gap: 2.7rem;
+    
+}
+.photo
+{
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.5rem;
+    text-align: center;
+    align-items: center;
+    height:5rem;
+}
+.vt
+{
+    display: flex;
+    column-gap: 0.2rem;
+    align-items: center;
+    padding-right: 0.2rem;
+}
+.table2
+{
+    border: 0.01rem black solid;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    /* padding: 0.5rem; */
+}

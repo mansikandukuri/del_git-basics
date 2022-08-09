@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rock paper scissors</title>
+  </head>
+  <body>
+    <h1>Rock paper scissors</h1>
+    <script>
+      var user = prompt(`Choose one from:
+    1: rock
+    2: paper
+    3: scissor
+`);
+
+      options = ["rock", "paper", "scissor"];
+      var bot = 0;
+      var temp = Math.floor(Math.random() * 3 + 1) - 1;
+      // console.log(temp);
+
+      bot = options[temp];
+      console.log(user);
+      console.log(bot);
+
+      if (user != bot) {
+        if (user == "rock" && bot == "scissor") {
+          console.log("YOU WIN!");
+        } else if (user == "scissor" && bot == "paper") {
+          console.log("YOU WIN!");
+        } else if (user == "paper" && bot == "rock") {
+          console.log("YOU WIN!");
+        } else {
+          console.log("YOU SUCK");
+        }
+      } else {
+        console.log("PLAY AGAIN");
+      }
+      // console.log(bot);
+    </script>
+  </body>
+</html>

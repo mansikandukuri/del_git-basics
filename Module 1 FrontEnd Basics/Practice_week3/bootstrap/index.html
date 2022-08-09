@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <title>Bootstrap Demo</title>
+    
+</head>
+<body>
+    <div class="row">
+        <div class="card">
+            <div class="card-header">
+                <h1 class="text-center"> User Registration Form</h1>
+            </div>
+            <div class="card-body">
+                <form>
+                    <!--first name  -->
+                    <div class="row mb-2">
+                        <div class="form-floating">
+                            <label for="first-name" class="form-label">First Name :</label>
+                            <input type="text" id="first-name" class="form-control" placeholder="Enter first name">
+                        </div>
+                    </div>
+                    <!-- lastname -->
+                    <div class="row mb-2">
+                        <label for="last-name">Last Name :</label>
+                        <input type="text" id="last-name" class="form-control" placeholder="Enter last name">
+                    </div>
+                    <!-- email -->
+                    <div class="row mb-2">
+                        <label for="email">Email :</label>
+                        <input type="text" id="email" class="form-control">
+                    </div>
+                    <!-- password -->
+                    <div class="row mb-2">
+                        <label for="password">Password :</label>
+                        <input type="password" id="password" class="form-control">
+                    </div>
+                    <!-- date of birth -->
+                    <div class="row mb-2">
+                        <div class="form-floating">
+                            <input type="date" id="dob" class="form-control" placeholder="Enter DOB">
+                            <label for="dob">Date of Birth :</label>
+                           
+                        </div>
+                    </div>
+                    <!-- contract number -->
+                    <div class="row mb-2">
+                        <label for="number">Number :</label>
+                        <input type="number" id="number" class="form-control">
+                    </div>
+                    <!-- country -->
+                    <div class="row mb-2">
+                        <label for="Country">Country :</label>
+                        <select id="country" class="form-select">
+                            <option value="india">INDIA</option>
+                            <option value="nepal">NEPAL</option>
+                            <option value="bhutan">BHUTAN</option>
+                        </select>
+                    </div>
+                    <!-- state -->
+                    <div class="row mb-2">
+                        <label for="state">State :</label>
+                        <select id="state" multiple>
+                            <option value="hyderabad">HYDERABAD</option>
+                            <option value="chennai">CHENNAI</option>
+                            <option value="bangalore">BANGALORE</option>
+                        </select>
+                    </div>
+                    <!-- gender -->
+                    <div class="row mb-2">
+                        <div class="col-4">Gender :</div>
+                        <label for="gender"
+                        <div class="form-check">
+                           
+                        </div>
+
+                        
+                        <input type="radio" name="gender" value="male" class="form-check-input">MALE
+                        <input type="radio" name="gender" value="female" class="form-check-input">FEMALE
+                        <input type="radio" name="gender" value="other" class="form-check-input">OTHER
+                    </div>
+                    <!-- terms and conditions -->
+                    <div class="row mb-2">
+                        <div class="form-floating">
+                            <input type="checkbox" id="tnc" class="form-check-input">
+                            <label for="tnc">Terms and conditions</label>
+                        </div>
+                    </div>
+                    <!-- button -->
+                    <!-- reset -->
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous">
+    </script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arrays</title>
+  </head>
+  <body>
+    <h1>WORKING WITH ARRAYS</h1>
+    <h2>Julia and her dogs.</h2>
+
+    <script>
+      var juliaDogs = [3, 5, 2, 12, 7];
+      var kateDogs = [4, 1, 15, 8, 3];
+      var newJuliaDogs = [0, 0];
+      var newArr = [];
+
+      function checkDogs(num1, num2) {
+        for (var i = 1; i < 3; i++) {
+          newJuliaDogs[i - 1] = num1[i];
+          newArr.push(newJuliaDogs[i - 1]);
+        }
+        for (var i = 0; i < kateDogs.length; i++) {
+          newArr.push(kateDogs[i]);
+        }
+
+        for (var i = 0; i < newArr.length; i++) {
+          if (newArr[i] < 3) {
+            console.log(`Dog number ${i + 1} is still a puppy`);
+          } else {
+            console.log(
+              `Dog number ${i + 1} is an adult, and is ${newArr[i]} years old`
+            );
+          }
+        }
+      }
+      checkDogs(juliaDogs, kateDogs);
+      console.log(newArr);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Location Weather</title>
+    <style>
+      body {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>WEATHER APP</h1>
+    <input type="text" name="name_of_city" id="cityName" />
+    <button id="btn">Fetch</button>
+    <ul class="user-lists list-group"></ul>
+    <p id="display"></p>
+
+    <script>
+      const btnFetch = document.querySelector("#btn");
+      const display = document.getElementById("display");
+      btnFetch.addEventListener("click", function () {
+        const xhr = new XMLHttpRequest();
+        const xhr2 = new XMLHttpRequest();
+        const city = document.getElementById("cityName").value;
+        document.getElementById("cityName").value = "";
+        console.log(city);
+
+        const url = `https://api.mapbox.com/geocoding/v5/mapbox.places/${city}.json?access_token=pk.eyJ1Ijoic3luZXJneTI0MTEiLCJhIjoiY2p4NXc0cm53MDZoODQwbHFuNzdzMzV5NCJ9.DKIDo6bcG51yLXf2DmlYcQ`;
+        xhr.open("GET", url);
+        xhr.addEventListener("load", () => {
+          const user = JSON.parse(xhr.responseText);
+
+          const coordinates = user.features[0].geometry.coordinates;
+          // display.innerHTML = coordinates + "<br>" + city;
+
+          const postUrl = `https://api.open-meteo.com/v1/forecast?latitude=${coordinates[1]}&longitude=${coordinates[0]}&daily=weathercode&timezone=UTC&current_weather=true`;
+          const postXHR = new XMLHttpRequest();
+          xhr2.open("GET", postUrl);
+          xhr2.addEventListener("load", () => {
+            // console.log("123456");
+            const weather = JSON.parse(xhr2.responseText);
+            console.log("weather", weather);
+            const temp = weather.current_weather.temperature;
+            console.log("Temperature", temp);
+
+            const weatherCode = weather.current_weather.weathercode;
+            console.log("Weather Code", weatherCode);
+
+            function findWeather(x) {
+              if (x == 0) {
+                return "Clear sky";
+              } else if (x < 4) {
+                return "Partily cloudly";
+              } else if (x <= 48) {
+                return "Fog";
+              } else if (x <= 55) {
+                return "Drizzle";
+              } else if (x <= 57) {
+                return "Light Rain";
+              } else if (x <= 65) {
+                return "Light Rain";
+              } else if (x <= 67) {
+                return "Freezing Rain";
+              } else if (x <= 75) {
+                return "Snow Fall";
+              } else if (x <= 77) {
+                return "Snow Grains";
+              } else if (x <= 82) {
+                return "Rain Shower";
+              } else if (x <= 86) {
+                return "Snow Shower";
+              } else if (x <= 95) {
+                return "Moderate Thunderstorm";
+              } else if (x <= 99) {
+                return "Heavy Thunderstorm";
+              }
+            }
+
+            var actualWeather = findWeather(weatherCode);
+
+            display.innerHTML = `Coordinates : ${coordinates}<br>
+            Location : ${city}<br>
+            Temp. : ${temp}<br>
+            Weather code : ${weatherCode}<br>
+            Weather : ${actualWeather}`;
+          });
+          xhr2.send();
+        });
+        xhr.send();
+      });
+    </script>
+  </body>
+</html>

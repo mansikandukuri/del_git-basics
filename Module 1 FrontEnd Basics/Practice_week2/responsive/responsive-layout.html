@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Layout</title>
+    <style>
+        html
+        {
+            font-size: 62.5%;
+        }
+       *
+        {
+            margin: 0;
+            padding: 0;
+        }
+        img
+        {
+            max-width: 100%;
+        }
+        .container
+        {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            padding: 1rem;
+            font-size: 3rem;
+        }
+        @media screen and (max-width: 1200px)
+        {
+            body
+            {
+                background-color: red;
+            }
+        }
+        @media screen and (max-width: 1080px)
+        {
+            body
+            {
+                background-color: green;
+            }
+        }
+        @media screen and (max-width: 760px)
+        {
+            body
+            {
+                background-color: blue;
+            }
+        }
+        @media screen and (max-width: 420px)
+        {
+            body
+            {
+                background-color: yellow;
+            }
+            html
+            {
+                font-size: 25%;
+            }
+            .container
+            {
+                grid-template-columns: 1fr;
+                justify-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <p>
+         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequuntur earum repudiandae reprehenderit natus beatae vitae odit hic neque quas qui! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nobis sapiente ut doloremque adipisci dolorum veritatis eveniet necessitatibus ipsam a! Officiis.
+        </p>
+         <img src="img2.jpg" width=300px>
+    </div>
+</body>
+</html>

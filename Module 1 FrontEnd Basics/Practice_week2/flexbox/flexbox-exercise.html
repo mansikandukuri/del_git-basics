@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Box Exercise</title>
+    <style>
+        .main
+        {
+            margin: auto;
+            width: 700px;
+           
+        }
+        .container1
+        {
+            background-color: rgb(141, 21, 160);
+            height: 50px;
+            color: white;
+            font-family: sans-serif;
+            font-weight: 300;
+            display:flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        nav
+        {
+            text-align: right;
+            display: flex;
+            column-gap: 10px;
+            font-weight: 400;
+            font-size: small;
+        }
+        .nav-color
+        {
+            color: white;
+            text-decoration: none;
+        }
+        .container2
+        {
+            display: flex;
+            column-gap: 20px;
+            align-items: center;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            font-family: sans-serif;
+        
+        }
+        .container3
+        {
+            display: flex;
+            column-gap: 15px;
+            font-family: sans-serif;
+        }
+        .container3-2
+        {
+            background-color: rgb(227, 222, 230);
+            height: 280px;
+            width: 240px;
+            text-align: center;
+            border: 1px black solid;
+        }
+        .mini-container1
+        {
+            background-color: rgb(141, 21, 160);
+            font-size: large;
+            color: white;
+            font-family: sans-serif;
+            font-weight: 700;
+            padding: 20px;        
+        }
+        .mini-container2
+        {
+            display: flex;
+            padding: 5px;
+            column-gap: 10px;
+        }
+        p
+        {
+            font-size:x-small;
+            text-align: left;
+        }
+        .container4
+        {
+            text-align: left;
+            width: 450px;
+            height: 300px;
+        }
+        .btn-main
+        {
+            background-color: rgb(210, 184, 189);
+            padding: 15px;
+            position: absolute;
+            right: 22.5%;
+            top:110%;
+            border: 1px rgb(141, 21, 160) solid;
+            display: flex;
+            align-items: center;
+            column-gap: 4px;
+        }
+        .btn1
+        {
+            color: red;
+        }
+        .btn2
+        {
+            color: rgb(141, 21, 160);
+        }
+        .footer-text
+        {
+            font-weight: 800;
+            font-size: smaller;
+        }
+        footer
+        {
+            border-bottom: 8px rgb(141, 21, 160) solid;
+            font-weight: 800;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+    <div class="container1">
+        <h1>
+            🏠CSS Layouts
+        </h1>
+        <nav>
+            <div><a href="https://en.wikipedia.org/wiki/Home" target="_black" class="nav-color">Home</a></div>
+            <div><a href="https://en.wikipedia.org/wiki/Products" target="_black" class="nav-color">
+                Products</a></div>
+            <div><a href="https://en.wikipedia.org/wiki/Services" target="_black" class="nav-color">
+                Services</a></div>
+            <div><a href="https://en.wikipedia.org/wiki/Contactus" target="_black" class="nav-color">
+                Contact Us </a></div>
+        </nav>
+    </div>
+    <div class="container2">
+        <div>
+            <img src="img1.jpg" alt=".." width=100px>
+        </div>
+        <div>
+            I created this post for the sake of <i>fun</i>...
+        </div>
+    </div>
+    <div class="container3">
+        <div>
+            <img src="img2.jpg" width=450px>
+        </div>
+        <div class="container3-2">
+            <div class="mini-container1">
+                RELATED POST
+            </div>
+            <div class="mini-container2">
+                <img src="img3.webp" width=60px height=60px>
+                <p>
+                    <a href="https://www.merriam-webster.com/dictionary/scenery" target="_blank"> Someone write this post</a>
+                    <br>Lorem ipsum dolor sit amet consectetur adipisicing elit sconsectetur adipisicing elit 
+                </p>
+            </div>
+            <div class="mini-container2">
+                <img src="img3.webp" width=60px height=60px>
+                <p>
+                    <a href="https://www.merriam-webster.com/dictionary/scenery" target="_blank"> Someone write this post</a>
+                    <br>Lorem ipsum dolor sit amet consectetur adipisicing elit sconsectetur adipisicing elit 
+                </p>
+            </div>
+            <div class="mini-container2">
+                <img src="img3.webp" width=60px height=60px>
+                <p>
+                    <a href="https://www.merriam-webster.com/dictionary/scenery" target="_blank"> Someone write this post</a>
+                    <br>Lorem ipsum dolor sit amet consectetur adipisicing elit sconsectetur adipisicing elit 
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="container4">
+        <h1> Learning HTML and CSS is fun</h1>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur earum dolores voluptatum voluptate dolor, quod provident, voluptates cum doloribus quaerat sunt officiis ex maiores sint sapiente labore alias eius perferendis reprehenderit natus. 
+        <br>
+        <br>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Saepe debitis tenetur nemo doloremque.
+        <br>
+        <br>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellendus fugiat fuga perspiciatis iste accusantium vero delectus, obcaecati saepe officiis quia voluptatibus 
+    </div>
+    <div class="btn-main"> 
+        <div class="btn1">❤</div>
+        <div class="btn2">LIKE</div> 
+    </div>
+    <footer><i>Copyright &copy; The School of Coding</i></footer>
+    </div>
+</body>
+</html>

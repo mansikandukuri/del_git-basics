@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <map name="imgmap">
+        <area shape="rect" coords="8,7,707,577" href="https://www.bing.com/ck/a?!&&p=bd507ad155176f6039d29cd349a76bec7fac85c0137483d0a58bd60a314164d5JmltdHM9MTY1NzAxMzIwOCZpZ3VpZD1kZjMxMzMyZi1iM2ZmLTRhMzYtYTBkMy1hYzg2MTVkMzJkN2ImaW5zaWQ9NTE3Ng&ptn=3&fclid=97d99611-fc44-11ec-acb8-7f45747257f2&u=a1aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvTWljaGFlbF9KYWNrc29u&ntb=1" alt="APJ Abdul Kalam image" target="_blank">
+    <img src="a.jpg" alt="APJ" onmousemove="getCoords(event)" usemap="imgmap" width="400px">
+
+    <script>
+        function getCoords(event){
+            console.log("X : ",event.clientX);
+            console.log("Y : ",event.clientY);
+        }
+    </script>
+
+</body>
+</html>

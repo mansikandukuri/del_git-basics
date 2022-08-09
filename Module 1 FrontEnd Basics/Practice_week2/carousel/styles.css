@@ -1,0 +1,104 @@
+*
+{
+    margin: 0;
+    padding: 0;
+}
+body
+{
+    width: 600px;
+    margin: 100px auto;
+    font-family: 'roboto';
+    font-weight: 700;
+}
+.carousel
+{
+    background-color: #3A606E;
+    border-radius: 12px;
+    position: relative;
+    display: flex;
+    gap: 30px;
+    padding: 20px;
+    padding-left: 50px;
+    color: #c6d4da;
+}
+img
+{
+    width: 200px;
+    border-radius: 12px;
+    transform: scale(1.2);
+    box-shadow: 0 20px 25px rgba(0, 0, 0, 0.25);
+}
+.testimonial-text
+{
+    line-height: 1.2;
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 10px;
+    color: #c6d4da;
+}
+.testimonial-text::first-letter
+{
+    font-size: 50px;
+}
+.testimonial-author
+{
+    color: #c6d4da;
+    font-size: 17px;
+    margin-bottom: 3px;
+}
+.testimonial-author-role
+{
+    color: #c6d4da;
+    font-size: 15px;
+}
+.btn
+{
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background-color: #c6d4da;
+    border: 1px solid #3A606E;
+    border-radius: 50%;
+}
+.btn--left
+{
+    left: 0;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.1);
+}
+.btn--right
+{
+    right: 0;
+    top: 50%;
+    transform: translate(50%,-50%);
+    box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.1);
+}
+.icon
+{
+    width: 24px;
+    height: 24px;
+    stroke: #3A606E;
+}
+.dots
+{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%,150%);
+    display: flex;
+    gap: 12px;
+}
+.dot
+{
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: white;
+    border: 1px solid #3A606E;
+    box-shadow: 0 0 20px 25 rgba(0, 0, 0, 0.2)
+}
+.dot--first
+{
+    background-color: #3A606E;
+}

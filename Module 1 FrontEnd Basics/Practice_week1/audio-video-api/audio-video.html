@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audio Video</title>
+    <style>
+        .body{
+            align-items: center;
+        }
+        .controls{
+            display:flex;
+            column-gap: 60px;
+        }
+    </style>
+</head>
+<body class="body">
+    <!-- <audio src="sample_a1.mp3"  controlsList="nodowload" controls>
+        <source src="sample_a1" type="audio/mp3">
+    </audio> -->
+
+    <div class="controls">
+        <div>
+        Audio Controls:
+        <button id="playBtn_a"> ▶ </button>
+        <button id="pauseBtn_a"> ⏸ </button>
+        </div>
+        <div>
+        Video Controls:
+        <button id="playBtn_v"> ▶ </button>
+        <button id="pauseBtn_v"> ⏸ </button>
+        </div>
+    </div>
+
+    <script>
+        var audio = new Audio("sample_a1.mp3");
+        playBtn_a.addEventListener("click", function(){
+            audio.play()
+        })
+
+        pauseBtn_a.addEventListener("click", function(){
+            audio.pause()
+        })
+        document.body.appendChild(audio)
+
+        var video = document.createElement("video")
+        video.src="sample_v1.mp4"
+        video.height=500
+        video.width=650
+        video.poster="sample_img.jpg"
+        playBtn_v.addEventListener("click", function(){
+            video.play()
+        })
+
+        pauseBtn_v.addEventListener("click", function(){
+            video.pause()
+        })
+        document.body.appendChild(video)
+    </script>    
+</body>
+</html>

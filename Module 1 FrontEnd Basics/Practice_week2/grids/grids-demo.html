@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Demo</title>
+    <style>
+        .container
+        {
+            width: 600px;
+            margin: 0 auto;
+            background-color: #333;
+            font-size: 32px;
+            font-family: Arial, Helvetica, sans-serif;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            column-gap: 5px;
+            row-gap: 5px;
+            /* grid-template-columns: 100px 120px 150px; */
+            /* grid-template-columns: 100px 120px 150px 100px; */
+            /* grid-template-rows: 150px 150px; */
+            /* justify-items: center; */
+            /* align-items: center; */
+        }
+        .e1
+        {
+            background-color: rgb(253, 69, 69);
+            grid-column: 1 / -1;
+        }
+        .e2
+        {
+            background-color: rgb(255, 174, 1);
+            /* grid-row: 2 / span 2; */
+        }
+        .e3
+        {
+            background-color: rgb(170, 244, 24);
+            height: 120px;
+        }
+        .e4
+        {
+            background-color: rgb(10, 236, 244);
+
+        }
+        .e5
+        {
+            background-color: rgb(172, 141, 239);
+        }
+        .e6
+        {
+            background-color: rgb(241, 3, 222);
+        }
+        .e7
+        {
+            background-color: rgb(3, 19, 241);
+        }
+        .e8
+        {
+            background-color: rgb(8, 110, 0);
+        }
+        .e9
+        {
+            background-color: rgb(241, 241, 3);
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="e1">HTML</div>
+        <div class="e2">and</div>
+        <div class="e3">CSS</div>
+        <div class="e4">are</div>
+        <div class="e5">amazingly</div>
+        <div class="e6">wonderful</div>
+        <div class="e7">with</div>
+        <div class="e8">fun</div>
+        <div class="e9">activities</div>
+    </div>
+</body>
+</html>

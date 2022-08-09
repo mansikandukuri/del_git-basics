@@ -1,0 +1,258 @@
+.body{
+    font-size: 24px;
+}
+.container
+{
+    width: 60%;
+    box-shadow: 0 0 0.5rem 0.5rem rgb(199, 196, 196);
+    margin: auto;
+    margin-top: 5rem;
+}
+.header
+{
+    background-color: rgb(241, 239, 237);
+    border-top: 0.3rem black solid;
+    border-left: 0.3rem black solid;
+    border-right: 0.3rem black solid;
+    /* height: 3.3rem; */
+    align-items: center;
+    text-align: center;
+    font-size: 1.8vw;
+    padding-top: 0.7rem;
+    padding-bottom: 0.7rem;
+    padding-left: 1.2rem;
+    padding-right: 1rem;
+    font-family:Helvetica;
+    font-weight: 700;
+    word-wrap: break-word;
+}
+.mid
+{
+    border-left: 0.3rem black solid;
+    border-right: 0.3rem black solid;
+    padding-bottom: 1rem;
+}
+.mid1
+{
+    padding: 0;
+    display: flex;
+    /* align-items: center; */
+    margin-top: 1rem;
+}
+img
+{   margin: 0;
+    max-width: 100%;
+}
+.mid2
+{
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+    padding-left: 0.5rem;
+    
+}
+.mid2-head
+{
+    padding-top: 1rem;
+    font-family:Helvetica;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    align-items: center;
+}
+.sixty-five
+{
+    padding-left: 1rem;
+    text-align: left;
+    font-weight: 800;
+    font-size: 2rem; 
+     
+}
+
+.shipping
+{
+    text-align: right;
+    /* padding-right: 2rem; */
+    padding-top: 0;
+    font-weight: 600;
+    font-size: 0.7rem; 
+    
+    animation-name: anim-first;
+    /* animation-timing-function: linear; */
+    animation-duration: 1s;
+    /* animation-fill-mode: forwards; */
+    animation-iteration-count: infinite; 
+}
+@keyframes anim-first
+        {
+            0%
+            {
+                color: red; 
+            }
+            50%
+            {
+                color: rgb(0, 255, 17); 
+            }
+            100%
+            {
+                color: red; 
+            }
+        }
+.mid2-content
+{
+    text-align: left;
+    font-family:Helvetica;
+}
+
+.mid2-info
+{
+    text-align: left;
+    padding-bottom: 0;
+    margin-bottom: 0;
+    font-family:Helvetica;
+    color: black;
+}
+.a1
+{
+    color: black;
+}
+.mid2-colors
+{
+    text-align: left;
+    display: flex;
+    column-gap: 0.4rem;
+    padding-top: 0;
+    margin-top: 0;
+}
+.color1
+{
+    width: 1.2rem;
+    height: 1.2rem;
+    background-color: black;
+}
+.color2
+{
+    width: 1.2rem;
+    height: 1.2rem;
+    background-color: red;
+}
+.color3
+{
+    width: 1.2rem;
+    height: 1.2rem;
+    background-color: rgb(184, 221, 0);
+}
+.color4
+{
+    width: 1.2rem;
+    height: 1.2rem;
+    background-color: rgb(5, 195, 209);
+}
+.color5
+{
+    width: 1.2rem;
+    height: 1.2rem;
+    background-color: rgb(128, 36, 220);
+}
+.color6
+{
+    width: 1.2rem;
+    height: 1.2rem;
+    background-color: rgb(218, 6, 162);
+}
+.mid3
+{
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+    padding-left: 0.5rem;
+    padding-right: 0.3rem;
+    font-family:Helvetica;
+    /* margin:0; */
+
+}
+.mid3-head
+{
+    padding-top: 1.5rem;
+    padding-left: 0.9rem;
+    font-size: 1.3rem;
+    font-weight: 550;
+    text-align: left;
+    font-family:Helvetica;
+    margin-bottom: 0px;
+} 
+.mid3-content{
+    margin-top: 0px;
+}
+.footer
+{
+    background-color: black;
+    color: white;
+    /* height: 3rem; */
+    font-size: 1.3rem;
+    padding-top: 0.7rem;
+    padding-bottom: 0.7rem;
+    align-items: center;
+    text-align: center;
+    font-family: Helvetica;
+    font-weight: 600;
+}
+.a2
+{
+    text-decoration: none;
+    color: white;
+}
+ul {
+    padding-top: 0;
+    font-size: 1rem;
+    text-align: left;
+    margin-top: 0px;
+}
+.btn
+{
+    background-color: red;
+    color: white;
+    position: absolute;
+    width: 4rem;
+    height: 2rem;
+    border: 0.01rem black solid;
+    top: 12%;
+    left: 19%;
+    font-weight:bold ;
+    animation-name: anim-second;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+
+}
+@keyframes anim-second
+        {
+            0%
+            {
+                transform: scale(130%);
+                transition: all 1s linear;
+            }
+            50%
+            {
+                transform: scale(80%);
+                transition: all 1s linear; 
+            }
+            100%
+            {
+                transform: scale(130%);
+                transition: all 1s linear; 
+            }
+        }
+    
+
+@media screen and (max-width: 420px)
+    {
+        .mid2-head
+        {
+            padding-top: 1rem;
+            font-family:Helvetica;
+            display: flex;
+            flex-direction: column;
+            justify-content:space-between;
+            /* align-items: center; */
+        }
+    }

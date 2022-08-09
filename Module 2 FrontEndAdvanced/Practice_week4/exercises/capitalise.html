@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Capitalise</title>
+  </head>
+  <body>
+    <h1>Capitalise</h1>
+    <script>
+      arr = ["a", "b", "c", "d"];
+
+      function capital(arr) {
+        newArr = [];
+
+        newArr = arr.map(myFunc);
+        console.log(newArr);
+      }
+
+      function myFunc(str) {
+        return str.toUpperCase();
+      }
+
+      capital(arr);
+
+      // str = "something in the way";
+      // console.log(str.toUpperCase());
+    </script>
+  </body>
+</html>

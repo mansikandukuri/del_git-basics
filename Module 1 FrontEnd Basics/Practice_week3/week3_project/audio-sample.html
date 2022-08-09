@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audio Video</title>
+    <style>
+        /* .body{
+            align-items: center;
+        }
+        .controls{
+            display:flex;
+            column-gap: 60px;
+        }
+        .btn
+        {
+            width: 10rem;
+            height: 10rem;
+            background-color: aqua;
+        } */
+article,
+aside,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+p,
+pre {
+  margin: 0 0 15px 0;
+}
+section {
+  padding: 20px 0;
+  overflow: hidden;
+  text-align: center;
+}
+#wrap {
+  margin: 0 auto;
+  width: 500px;
+}
+audio {
+  display: none;
+}
+.logo {
+  text-align: center;
+}
+.logo a {
+  color: #fff;
+}
+#welcomeTxt,
+#shutdownTxt {
+  background: #000;
+  padding: 10px;
+  border-radius: 10px;
+  text-decoration: none;
+}
+    </style>
+</head>
+<body class="body">
+
+    <section>
+   <audio id="welcomeSound" controls="controls" preload="auto">
+      <source src="08 Here Comes The Sun.mp3"></source>
+      <source src="08 Here Comes The Sun.ogg"></source>
+      Your Browser does not support please use (Firefox 3.5+, Chrome 3+, Opera 10.5+, Safari 4+, IE 9+) browsers.
+   </audio>
+   <audio id="shutdownSound" controls="controls" preload="auto">
+      <source src=""></source>
+      <source src=""></source>
+      Your Browser does not support please use (Firefox 3.5+, Chrome 3+, Opera 10.5+, Safari 4+, IE 9+) browsers.
+   </audio>
+   <p class="info">
+      Use latest Browser Chrome or FireFox.<br /> If you usig Internet download manager please close it.
+   </p>
+   <a id="welcomeTxt" href="#">
+   Welcome(Mouse hover here)
+   </a>
+   <br />
+   <br />
+   <br />
+   <a id="shutdownTxt" href="#">
+   Shutdown(Mouse hover here)
+   </a>
+</section>
+
+
+
+<script>
+    window.onload = function() {
+  // collecting elements
+  var welcomeSound = document.getElementById("welcomeSound");
+  var welcomeTxt = document.getElementById("welcomeTxt");
+
+  var sdSound = document.getElementById("shutdownSound");
+  var sdTxt = document.getElementById("shutdownTxt");
+  //playing welcome sound on mouse over
+  welcomeTxt.onmouseover = function() {
+    welcomeSound.play();
+    return false;
+  };
+
+  sdTxt.onmouseover = function() {
+    sdSound.play();
+    return false;
+  };
+};
+</script>
+
+    <!-- <audio src="sample_a1.mp3"  controlsList="nodowload" controls>
+        <source src="sample_a1" type="audio/mp3">
+    </audio> -->
+
+    <!-- <div class="controls">
+        <div>
+        Audio Controls:
+        <button class="btn" id="playBtn_a"> ▶ </button>
+        <button id="pauseBtn_a"> ⏸ </button>
+        </div>
+        <div>
+            Audio Controls:
+            <nav class="btn" id="mySoundCLip"> ▶ </nav>
+            <div id="pauseBtn_a"> ⏸ </div>
+            </div>
+        <div>
+        Video Controls:
+        <button id="playBtn_v"> ▶ </button>
+        <button id="pauseBtn_v"> ⏸ </button>
+        </div>
+    </div> -->
+
+
+    <!-- <audio>
+        <source id="mySoundClip" src="08 Here comes The Sun.mp3"></source>
+        <source id="mySoundClip" src="08 Here comes The Sun.ogg"></source>
+        Your browser isn't invited for super fun audio time.
+    </audio>
+
+    <script>
+        var audio = document.getElementById("mySoundClip");
+        audio.play();
+        var audio = $("#mySoundClip")[0];
+        // audio.play();
+        // var audio = $("#mySoundClip")[0];
+        $("nav").mouseenter(function() {
+        audio.play();
+        });
+    </script> -->
+
+
+    <!-- <script>
+        var audio = new Audio("08 Here comes The Sun.mp3");
+        playBtn_a.mouseenter(function(){
+            audio.play()
+        })
+
+        pauseBtn_a.addEventListener("hover", function(){
+            audio.pause()
+        })
+        document.body.appendChild(audio) -->
+
+        <!-- // var video = document.createElement("video")
+        // video.src="sample_v1.mp4"
+        // video.height=500
+        // video.width=650
+        // video.poster="sample_img.jpg"
+        // playBtn_v.addEventListener("click", function(){
+        //     video.play()
+        // })
+
+        // pauseBtn_v.addEventListener("click", function(){
+        //     video.pause()
+        // })
+        // document.body.appendChild(video) -->
+    <!-- </script>     -->
+</body>
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Good Vibes Form</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            .container{
+              text-align: center;
+              background-color: rgb(234, 239, 215);
+              margin-left: 300px;
+              margin-right: 300px;
+            }
+            .form{
+                text-align: center;
+            }
+            .table{
+                text-align: center;
+                /* margin-left: 110px;
+                margin-right: 110px; */
+            }
+            .col1{
+                text-align: right;
+                vertical-align: top;
+            }
+            .col2{
+                text-align: left;
+                vertical-align: top;
+            }
+        </style>
+      
+    </head>
+    <body style="text-align: center" >
+    <div class="container">
+        
+        <h1 style ="background-color: rgb(197, 246, 2); margin:0px">Good Vibes Form</h1>
+        Tell us something positive that happened to you today.
+        <br>
+        <br>
+       <form class="form">
+       <table  class="table">
+    
+        <tbody>
+            <tr >
+                <td class="col1">
+                    <label > Name: </label>
+                </td>
+                <td class="col2">
+                    <input type="text" name="username" placeholder="Enter your name" >
+                </td>
+            </tr>
+            <tr>
+                <td class="col1">
+                    <label > Email:  </label>
+                </td>
+                <td class="col2">
+                    <input type="email" name="email" placeholder="Enter your email id">
+                </td>
+            </tr>
+            <tr>
+                <td class="col1">
+                    <label > On a scale of 1 to 10, how good was it?: </label>
+                </td >
+                <td class="col2">
+                    <input type="number" name="scale" min="1" max="10" placeholder="Enter a number between 1 and 10">
+                </td>
+            </tr>
+            <tr>
+                <td class="col1">
+                    Where did it happen?:
+                </td>
+                <td class="col2">
+                    <select name = "dropdown">
+                        <option value = "At home" selected>At home</option>
+                        <option value = "At the office">At the office</option>
+                        <option value = "Elsewhere">Elsewhere</option>
+                     </select>
+                </td>
+            </tr>
+            <tr>
+                <td class="col1">
+                    At what time of the day did it happen?: 
+                </td>
+                <td class="col2">
+                    <input type="radio" name="time" value="Morning">
+                    <label >Morning</label><br>
+                    <input type="radio" name="time" value="Afternoon">
+                    <label >Afternoon</label><br>
+                    <input type="radio" name="time" value="Evening">
+                    <label >Evening</label><br>
+                </td>
+            </tr>
+            <tr>
+                <td class="col1">
+                    What emotions did you experience? (Select all that apply): 
+                </td>
+                <td class="col2">
+                    <input type="checkbox" name="emotions" value="Excited">
+                    <label >Excited</label><br>
+                    <input type="checkbox" name="emotions" value="Humbled">
+                    <label>Humbled</label><br>
+                    <input type="checkbox" name="emotions" value="Elated">
+                    <label >Elated</label><br>
+                    <input type="checkbox" name="emotions" value="Loved">
+                    <label >Loved</label><br>
+                    <input type="checkbox" name="emotions" value="Enthusiastic">
+                    <label >Enthusiastic</label><br>
+                </td>
+            </tr>
+           
+            <tr>
+                <td class="col1">
+                    <label > Please describe your positive experience: </label>
+                </td>
+                <td class="col2">
+                    <input type="search" name="search">
+                </td>
+           
+        </tbody>
+        </table>
+        <input type="submit" value="Submit form">
+       </form>
+    </div>
+    </body>
+
+</html>

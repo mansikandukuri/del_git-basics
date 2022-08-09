@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 5</title>
+    <style>
+        .container1
+        {
+            color: white;
+            text-align: center;
+            width: 200px;
+            border: 1px solid white;
+            background-color: rgb(187, 28, 28);
+            margin-top: 4px;
+            margin-bottom:4px;
+            margin-left: 4px;
+            margin-right: 4px;
+        }
+        .container2
+        {
+            text-align: center;
+            width: 200px;
+            border: 1px solid white;
+            background-color: white;
+            margin-top: 4px;
+            margin-bottom: 4px;
+            margin-left: 4px;
+            margin-right: 4px;
+        }
+        .bigContainer1
+        {
+            width: 209px;
+            border: 1.5px solid black;
+            border-radius: 5px;
+            background-color: white;
+            text-align: center;
+        }
+        .bigContainer2
+        {
+            width: 209px;
+            border: 1.5px solid black;
+            border-radius: 5px;
+            background-color: rgb(134, 210, 239);
+            text-align: center;
+        }
+        .biggerContainer
+        {
+           display: flex;
+           column-gap: 30px;
+           position: absolute;
+           margin: auto;
+           top: 20%;
+           left: 33%;
+        }
+        .my-border
+        {
+            border: 2px dotted black;
+        }
+        body
+        {
+            background-color: #F8D210;
+        }
+    </style>
+</head>
+<body>
+    <h1>Exercise 5</h1>
+    
+    <div class="biggerContainer">
+    <div class="bigContainer1">
+        <div class="container1" draggable="true" id="d"> D </div>
+        <div class="container1" draggable="true" id="p"> P </div>
+        <div class="container1" draggable="true" id="w"> W </div>
+        <div class="container1" draggable="true" id="o"> O </div>
+        <div class="container1" draggable="true" id="g"> G </div>
+        <div class="container1" draggable="true" id="k"> K </div>
+        <div class="container1" draggable="true" id="u"> U </div>
+        <div class="container1" draggable="true" id="e"> E </div>
+        <div class="container1" draggable="true" id="h"> H </div>
+        <div class="container1" draggable="true" id="m"> M </div>
+        <div class="container1" draggable="true" id="c"> C </div>
+        <div class="container1" draggable="true" id="s"> S </div>
+    </div>
+
+    <div class="bigContainer2">
+        <div class="container2" id="c"> B/--/D </div>
+        <div class="container2" id="h"> G/--/I </div>
+        <div class="container2" id="k"> J/--/L </div>
+        <div class="container2" id="d"> C/--/E </div>
+        <div class="container2" id="m"> L/--/N </div>
+        <div class="container2" id="p"> O/--/Q </div>
+        <div class="container2" id="s"> R/--/T </div>
+        <div class="container2" id="u"> T/--/V </div>
+        <div class="container2" id="w"> V/--/X </div>
+        <div class="container2" id="e"> D/--/F </div>
+        <div class="container2" id="g"> F/--/H </div>
+        <div class="container2" id="o"> N/--/P </div>
+    </div>
+    </div>
+
+    <script>
+        var blocks1 = document.getElementsByClassName("container1")
+        var blocks2 = document.getElementsByClassName("container2")
+        var sourceEl = null;
+
+        for(var i = 0; i<blocks1.length; i++)
+        {
+            blocks1[i].addEventListener("dragstart", onDragStart)
+            blocks2[i].addEventListener("dragend", onDragEnd)
+            blocks2[i].addEventListener("dragover", onDragOver)
+            blocks2[i].addEventListener("dragenter", onDragEnter)
+            blocks2[i].addEventListener("dragleave", onDragLeave)
+            blocks2[i].addEventListener("drop", onDrop)
+        }
+        function onDrop(event){
+            event.stopPropagation()
+            event.target.classList.remove("my-border")
+            
+            if(sourceEl.id == event.target.id){
+                sourceEl.innerHTML = "    "
+                var data = event.dataTransfer.getData("text/html");
+                var d1 = event.target.innerHTML.split("/--/",2);
+                event.target.innerHTML = d1[0] + " " + data + " " + d1[1];
+                sourceE1.classList.remove("container1");
+            }
+
+        }
+        function onDragOver(event){
+            event.preventDefault()
+        }
+        function onDragEnter(event){
+            event.target.classList.add("my-border")
+        }
+        function onDragLeave(event){
+            event.target.classList.remove("my-border")
+        }
+        function onDragEnd(){
+            event.target.style.opacity = '1'
+            event.target.classList.remove("my-border")
+        }
+        function onDragStart(event){
+            // event.target.style.opacity = '0.3'
+            sourceEl = event.target;        // B
+            event.dataTransfer.setData("text/html", event.target.innerHTML)     // B
+        }
+    </script>
+
+</body>
+</html>

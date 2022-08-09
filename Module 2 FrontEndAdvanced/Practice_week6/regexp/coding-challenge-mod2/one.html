@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coding Challenge Module 2</title>
+  </head>
+  <body>
+    <h1>Coding Challenge Module 2</h1>
+    <script>
+      //ONE
+      console.log("QUESTION 1");
+
+      let str1 = "qecdqer qw3efqerf qwedqe 9172 hjwgv79y7 2 ;'dws";
+      let regexp1 = /[a-z 0-9]/gi;
+
+      console.log(regexp1.test(str1));
+      console.log(str1.match(regexp1));
+
+      //TWO
+      console.log("QUESTION 2");
+
+      let str2 = "beafv bbafew aqwejfn abqer abbaaa aaaaaaaab wkdjnqlkwndabbbb";
+      let regexp2 = /a(b+)/gi;
+
+      console.log(regexp2.test(str2));
+      console.log(str2.match(regexp2));
+
+      //THREE
+      console.log("QUESTION 3");
+
+      let str3 =
+        "beafv bbafew aqwejfn abqer abbbaaa aaab wkdjnqlkwndabbbb abbb";
+      let regexp3 = /ab{3}/gi;
+
+      console.log(regexp3.test(str3));
+      console.log(str3.match(regexp3));
+
+      //FOUR
+      console.log("QUESTION 4");
+
+      let str4 = "beafv ASDC_ASDjhb b_bafew aqw_ejfn axvfASD_sdfg";
+      let regexp4 = /[a-z](_)[a-z]/g;
+
+      console.log(regexp4.test(str4));
+      console.log(str4.match(regexp4));
+
+      //FIVE
+      console.log("QUESTION 5");
+
+      let str5 = "beafv ASDC_ASDjhbB b_bafew aqw_ejfn dD Dd ";
+      let regexp5 = /[A-Z][a-z]/g;
+
+      console.log(regexp5.test(str5));
+      console.log(str5.match(regexp5));
+
+      //SIX
+      console.log("QUESTION 6");
+
+      let str6 = ["abeafv", "adcecb", "qkudfgvy", "asssssb"];
+      let regexp6 = /(^a)(.*)(b$)/g;
+
+      for (let i = 0; i < str6.length; i++) {
+        if (str6[i].match(regexp6)) {
+          console.log(str6[i]);
+        }
+      }
+
+      //SEVEN
+      console.log("QUESTION 7");
+
+      let str7 = [
+        "The beafv ASDC_ASDjhbB b_bafew",
+        "qerfqerf qvcqr ef",
+        "The WDKJNC KQDCNkejnc kajdcfn",
+        "qhbc jhebdc The jh",
+      ];
+      let regexp7 = /^The/g;
+
+      for (let i = 0; i < str7.length; i++) {
+        if (str7[i].match(regexp7)) {
+          console.log(str7[i]);
+        }
+      }
+
+      //EIGHT
+      console.log("QUESTION 8");
+      let str8 = "The beafv ASDC_ASDjzhbB b_bafewz zjutf";
+      let newstr = str8.split(" ");
+      let regexp8 = /z/g;
+      for (let i = 0; i < newstr.length; i++) {
+        if (newstr[i].match(regexp8)) {
+          console.log(newstr[i]);
+        }
+      }
+      //NINE
+      console.log("QUESTION 9");
+      let str9 = [
+        "The beafv ASDC_ASDjhbB b_bafew",
+        "qerfqerf qvcq789r ef",
+        "The WDKJNC KQDCNkejnc 34567 kajdcfn",
+        "qhbc jhebd;.c The;,. jh",
+        "'//'/'",
+        "khegvhjgvhgv",
+      ];
+      let regexp9 = /^[a-zA-Z0-9 _]*$/g;
+      for (let i = 0; i < str9.length; i++) {
+        if (str9[i].match(regexp9)) {
+          console.log(str9[i]);
+        }
+      }
+      //TEN
+      console.log("QUESTION 10");
+      let str10 = [
+        "The beafv ASDC_ASDjhbB b_bafew",
+        "qerfqerf qvcq789r ef8",
+        "The WDKJNC KQDCNkejnc 34567 kajdcfn",
+        "qhbc jhebd;.c The;,. jh7",
+        "'//'/'",
+        "khegvhjgvhgv",
+      ];
+      let regexp10 = /[0-9]$/g;
+      for (let i = 0; i < str10.length; i++) {
+        if (str10[i].match(regexp10)) {
+          console.log(str10[i]);
+        }
+      }
+
+      //ELEVEN
+      let str11 = "02/03/2022";
+      let res11 = str11.split("/");
+      console.log(res11);
+
+      //TWELVE
+      let str12 = "02032022";
+      let res12 = str12.split("\d");
+      console.log(res12);
+    </script>
+  </body>
+</html>

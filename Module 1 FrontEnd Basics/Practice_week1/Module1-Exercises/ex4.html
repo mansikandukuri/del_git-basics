@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 4</title>
+    <style>
+        .controls{
+            display:flex;
+            column-gap: 60px;
+            color: azure;
+            text-align: center;
+        }
+        body
+        {
+            margin:auto;
+            /* position: absolute;
+            margin: auto;
+            top: 20%;
+            left: 25%; */
+            display: flex;
+            flex-direction: column;
+            background-color: #213003;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="controls"> Exercise 4</h1>
+    <div class="controls">
+        <div>
+        Video Controls:
+        <button id="playBtn_v"> ▶ </button>
+        <button id="pauseBtn_v"> ⏸ </button>
+        </div>
+    </div>
+    <script>
+         var video = document.createElement("video")
+        video.src="big_buck_bunny.mp4"
+        video.height=500
+        video.width=650
+        playBtn_v.addEventListener("click", function(){
+            video.play()
+        })
+
+        pauseBtn_v.addEventListener("click", function(){
+            video.pause()
+        })
+        document.body.appendChild(video)
+    </script>    
+</body>
+</html>

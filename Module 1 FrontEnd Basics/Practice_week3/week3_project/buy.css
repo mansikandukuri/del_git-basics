@@ -1,0 +1,264 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+
+    background-color: #004369;
+    height: 120vh;
+}
+.left{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 90vh;
+    align-items: center;
+    
+}
+.container{
+    display: grid;
+    grid-template-columns: 4fr 4fr 2fr;
+    align-items: start;
+    margin: 1% 3% 1% 1%; 
+}
+.card{
+    border: 2px solid black;
+    border-radius: 5%;
+    width: auto;
+    margin: 0;
+    width: 70%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: bisque;
+    box-shadow: 0 0 20px 10px rgb(16, 39, 72) 
+
+}
+.card-img-top{
+    background-size: cover;
+    padding: 2%;
+
+}
+.card-title{
+    margin-top: 5%;
+    text-align: center;
+}
+.card-text{
+    text-align: center;
+    margin-bottom: 3%;
+}
+.card-body{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    position: relative;
+    height: 50%;
+}
+
+.heart{
+    position: absolute;
+    margin-top: 7%;
+    right: 7%;
+    height: 20px;
+    width: 20px;
+    color: white;
+    stroke: red;
+}
+
+.playingLine{
+    width: 100%;
+    height:2px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 3%;
+}
+.playing{
+    content: '';
+    height: 3px;
+    width: 30%;
+    background-color: white;
+    margin: 2px 0 2px 2px;
+}
+.dot{
+    content: '';
+    height: 10px;
+    width: 3%;
+    background-color: aliceblue;
+    border-radius: 50%;
+}
+.notPlaying{
+    content: '';
+    height: 1.5px;
+    width: 66%;
+    background-color: aliceblue;
+}
+
+.functionalIcons{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    color: aliceblue;
+    height: auto;
+    margin: auto 0 auto 0;
+}
+
+.functionalIcons svg{
+    width: 10%;
+    height: 30%;
+    margin: 6% 0 6%;
+}
+.playBut{
+    transform: scale(240%);
+}
+
+.discription{
+    margin-top: auto;
+    margin-bottom: 0;
+    margin: auto 0 0 4%;
+}
+.discriptionUl{
+    list-style: none;
+    font-weight: 800;
+    font-family: montserrat;
+    font-size: 1rem;
+    color: wheat;
+    margin: 10% 0;
+}
+.discriptionUl li{
+    padding-bottom:1% ;
+}
+.logiIimage{
+    background-image: url("images/Bornintheusa.jpg");
+    background-size: cover;
+    background-position: center;
+    border-radius: 15px 15px 0 0;
+    height: 50%;
+    width: 100%;
+}
+
+.right{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    color: wheat;
+    font-family: notable;
+}
+.title{
+    width: 100%;
+    height: 25%;
+    padding-top: 3%;
+}
+.songName{
+    font-size: 2rem;
+    font-weight: 700;
+}
+.artistName{
+    font-weight: 600;
+}
+.price{
+    margin-top: 3%;
+    font-size: 3rem;
+    font-weight: 700;
+    font-family: 'Times New Roman', Times, serif;
+}
+.rotate-image{
+    margin:;
+}
+.right-corner-1
+{
+    border: 0.1rem black solid;
+    background-color: #78a5c0;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+    font-family: notable;
+    font-weight: 400;
+    padding: 1rem;
+}
+.right-corner-2
+{
+    margin-top: 10%;
+    display: flex;
+    flex-direction: column;
+    font-family: notable;
+    font-weight: 400;
+}
+.btn-1
+{
+    height: 1.5rem;
+    background-color: rgb(255, 204, 0);
+    height: 2.5rem;
+    font-family: montserrat;
+    font-weight: 600;
+
+}
+.btn-2
+{
+    height: 3rem;
+    background-color: #78a5c0;
+    font-family: montserrat;
+    font-size: 1rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 0.5rem;
+    padding-right: 0.2rem;
+}
+.bi
+{
+    padding-left: 0.5rem;
+}
+.stock
+{
+    font-family: montserrat;
+    font-weight: 700;
+    color: rgb(4, 255, 4);
+    text-align: center;
+}
+.exclusive
+{
+    font-family: montserrat;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: rgb(183, 90, 90);
+    text-align: center;
+}
+.offer
+{
+    font-family: montserrat;
+    text-align: center;
+}
+a
+{
+    text-decoration: none;
+    color: black;
+}
+
+
+
+
+
+
+
+
+
+.rotate-image
+{
+    animation: rotation 4s linear infinite;
+    border-radius:50%;
+    max-width: 25rem;
+    max-height: 25rem;
+} 
+@keyframes rotation {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(359deg);
+    }
+  }

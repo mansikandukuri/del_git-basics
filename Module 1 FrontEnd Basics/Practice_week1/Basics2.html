@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Dr. A.P.J. Abdul Kalam </title>
+        <style>
+            ul{
+                list-style: none;
+            }
+            .links>li{
+                display: inline-block;
+            }
+            .link-item{
+                display: inline;
+                margin: 10px;
+                padding: 8px;
+            }
+            .container{
+                width: 1250px;
+                height: 600px;
+                /* border: 2px rosybrown dashed; */
+                padding: 8px;
+                margin: 10px;
+                box-sizing: border-box;
+            }
+            .nav-link:hover{
+                color:black;
+            }
+            .nav-link:active{
+                color: blue;
+            }
+            .nav-link:visited{
+                color: rgb(227, 6, 6);
+            }
+
+            .user-info{
+                display: flex;
+                justify-content: space-evenly;
+            }
+            .more-info{
+                border-radius: 5px;
+                background-color: azure;
+                
+            }
+            .button{
+                background-color: rgb(1, 30, 74);
+                color: white;
+                margin:auto;
+                display: flex;
+                position:fixed;
+                bottom: 10%;
+                left: 90%;
+            }
+          
+            #list{
+                font-family: cursive;
+                color: rgb(37, 63, 86);
+            }
+            #backdrop{
+                background-color: rgba(0,0,0,0.5);
+                position: fixed;
+                left: 0;
+                right: 0;
+                width: 100vw;
+                height: 100vh;
+                z-index: 50%;
+            }
+            #modal{
+                background-color: white;
+                position: fixed;
+                margin-left: 30vw;
+                width: 33vw;
+                margin-top: 33vw;
+                height: 33vh;
+                z-index: 70%;
+            }
+            .user-detail>p::first-letter{
+                font-size: xx-large;
+                font-weight: 900;
+            }
+            .user-detail>p::first-line{
+                color: rgb(111, 75, 31);
+               
+            }
+            .button::first-letter{
+                color: brown;
+            }
+           
+
+        </style>    
+    </head>
+    <body  class="container">
+        <h1> Dr. A.P.J. Abdul Kalam</h1>
+        <div  class="user-info">
+        <div>
+        <header style ="background-color: lightgrey;margin:15px"> 
+           <nav class="nav-link">
+            <ul class="links">
+                <li class="link-item"><a href="/home">Home</a></li>
+                <li class="link-item"><a href="/products">Products</a></li>
+                <li class="link-item"><a href="https://en.wikipedia.org/wiki/A._P._J._Abdul_Kalam">Services</a></li>
+                <li class="link-item"><a href="https://www.bing.com/search?q=sundar+pichai&cvid=c73fb22ef37a4d5db0c2f509631d2f0f&aqs=edge.0.0l9j69i11004.4543j0j1&pglt=2083&FORM=ANNAB1&PC=U531#">Contact Us</a></li>
+            </ul>
+            </nav>
+        </header>
+        <map name="kalamimgmap">
+            <area shape="circle" coords="150,150,100" href="https://en.wikipedia.org/wiki/A._P._J._Abdul_Kalam" alt="APJ Abdul Kalam image" target="_blank">
+        </map>
+        <figure> <img src = "a.jpg"  width = "300px" height="300px" alt="APJ Abdul Kalam" onmousemove="getCoords(event)" usemap="#kalamimgmap">
+            <figurecaption> This is Dr. APJ Abdul Kalam </figurecaption>
+        </figure>
+        <br> 
+      </div>
+
+      <div class="user-detail">
+        <p>
+        Avul Pakir Jainulabdeen Abdul Kalam (15 October 1931 – 27 July 2015) was an Indian aerospace scientist who served as the 11th President of India from 2002 to 2007. He was born and raised in Rameswaram, Tamil Nadu and studied physics and aerospace engineering. He spent the next four decades as a scientist and science administrator, mainly at the Defence Research and Development Organisation (DRDO) and Indian Space Research Organisation (ISRO) and was intimately involved in India's civilian space programme and military missile development efforts. He thus came to be known as the 'Missile Man of India' for his work on the development of ballistic missile and launch vehicle technology. He also played a pivotal organisational, technical, and political role in India's Pokhran-II nuclear tests in 1998, the first since the original nuclear test by India in 1974.
+        </p>
+        <p>
+            Kalam was elected as the 11th president of India in 2002 with the support of both the ruling Bharatiya Janata Party and the then-opposition Indian National Congress. Widely referred to as the "People's President",[6] he returned to his civilian life of education, writing and public service after a single term. He was a recipient of several prestigious awards, including the Bharat Ratna, India's highest civilian honour.
+            While delivering a lecture at the Indian Institute of Management Shillong, Kalam collapsed and died from an apparent cardiac arrest on 27 July 2015, aged 83.[7] Thousands, including national-level dignitaries, attended the funeral ceremony held in his hometown of Rameswaram, where he was buried with full state honours.
+
+
+        </p>
+        <p>
+            Avul Pakir Jainulabdeen Abdul Kalam (15 October 1931 – 27 July 2015) was an Indian aerospace scientist who served as the 11th President of India from 2002 to 2007. He was born and raised in Rameswaram, Tamil Nadu and studied physics and aerospace engineering. He spent the next four decades as a scientist and science administrator, mainly at the Defence Research and Development Organisation (DRDO) and Indian Space Research Organisation (ISRO) and was intimately involved in India's civilian space programme and military missile development efforts. He thus came to be known as the 'Missile Man of India' for his work on the development of ballistic missile and launch vehicle technology. He also played a pivotal organisational, technical, and political role in India's Pokhran-II nuclear tests in 1998, the first since the original nuclear test by India in 1974.
+            </p>
+            <p>
+                Kalam was elected as the 11th president of India in 2002 with the support of both the ruling Bharatiya Janata Party and the then-opposition Indian National Congress. Widely referred to as the "People's President",[6] he returned to his civilian life of education, writing and public service after a single term. He was a recipient of several prestigious awards, including the Bharat Ratna, India's highest civilian honour.
+                While delivering a lecture at the Indian Institute of Management Shillong, Kalam collapsed and died from an apparent cardiac arrest on 27 July 2015, aged 83.[7] Thousands, including national-level dignitaries, attended the funeral ceremony held in his hometown of Rameswaram, where he was buried with full state honours.
+    
+    
+            </p>
+    
+        <br>
+        <br>
+        <b>A timeline of Dr. APJ Abdul Kalam's Life:</b>
+        <ul>
+            <li id="list"><b>1931:</b>Born on 15th October in Rameshwaram, Tamil Nadu</li>
+            <li id="list"><b>1954:</b>Graduated from St. Joseph's College, Trichy</li>
+            <li id="list"><b>1955:</b>Enrolled at MIT to study aerospace engineering</li>
+            <li><b>1960:</b>Joined DRDO as chief Scientist</li>
+            <li><b>1960:</b>Joined DRDO as chief Scientist</li>
+            <li><b>1960:</b>Joined DRDO as chief Scientist</li>
+            <li><b>1960:</b>Joined DRDO as chief Scientist</li>
+
+        </ul>
+        </div>
+        
+        </div>
+        
+        <input type="submit" value="More info" class="button">
+        <script>
+            function getCoords(event){
+                console.log("X : ",event.clientX);
+                console.log("Y : ",event.clientY);
+            }
+        </script>
+
+    </body>
+
+</html>
